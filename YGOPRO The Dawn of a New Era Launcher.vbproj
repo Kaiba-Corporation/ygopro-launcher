@@ -1,0 +1,1070 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98F9D736-687A-4F88-905A-56FD699A7027}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>YGOPRO_The_Dawn_of_a_New_Era_Launcher.My.MyApplication</StartupObject>
+    <RootNamespace>YGOPRO_The_Dawn_of_a_New_Era_Launcher</RootNamespace>
+    <AssemblyName>YGOPRO Dawn of a New Era Launcher Pro</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>YGOPRO Dawn of a New Era Launcher Pro.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>YGOPRO Dawn of a New Era Launcher Pro.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>YGO PRO %28256x256%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MBProgressBar">
+      <HintPath>.\MBProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>.\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcceptQueue.Designer.vb">
+      <DependentUpon>AcceptQueue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptQueue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Control Panel.Designer.vb">
+      <DependentUpon>Admin Control Panel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Control Panel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Card Skins\CardSkinManager.vb" />
+    <Compile Include="Card Skins\DatabaseHelper.vb" />
+    <Compile Include="Card Skins\SQLiteDatabase.vb" />
+    <Compile Include="ChallengeForm.Designer.vb">
+      <DependentUpon>ChallengeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChallengeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom Private Chat.Designer.vb">
+      <DependentUpon>Custom Private Chat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Private Chat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeckTest.Designer.vb">
+      <DependentUpon>DeckTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeckTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoundOpponent.Designer.vb">
+      <DependentUpon>FoundOpponent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FoundOpponent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MysteryBoxItems.Designer.vb">
+      <DependentUpon>MysteryBoxItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MysteryBoxItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options_2.Designer.vb">
+      <DependentUpon>Options_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Options_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pending Deck.Designer.vb">
+      <DependentUpon>Pending Deck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pending Deck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransparentRichTextbox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Controls\CreateTournament.Designer.vb">
+      <DependentUpon>CreateTournament.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\CreateTournament.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\StorePages\BordersStorePage.Designer.vb">
+      <DependentUpon>BordersStorePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StorePages\BordersStorePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Item.vb" />
+    <Compile Include="PostDuelMessage.Designer.vb">
+      <DependentUpon>PostDuelMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PostDuelMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\NewsControl.Designer.vb">
+      <DependentUpon>NewsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\NewsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\DuelingRobot.Designer.vb">
+      <DependentUpon>DuelingRobot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\DuelingRobot.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\FrontDuelPage.Designer.vb">
+      <DependentUpon>FrontDuelPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\FrontDuelPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Game.vb" />
+    <Compile Include="User Controls\PvPDuelPage.Designer.vb">
+      <DependentUpon>PvPDuelPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\PvPDuelPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\SinglePlayerDuelPage.Designer.vb">
+      <DependentUpon>SinglePlayerDuelPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\SinglePlayerDuelPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\SkillTests.Designer.vb">
+      <DependentUpon>SkillTests.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\SkillTests.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\GameList.Designer.vb">
+      <DependentUpon>GameList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\GameList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Buttons.Designer.vb">
+      <DependentUpon>Buttons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Buttons.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.vb">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBannedWords.vb" />
+    <Compile Include="JarvisHelp.vb" />
+    <Compile Include="User Controls\StoreButtons.Designer.vb">
+      <DependentUpon>StoreButtons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StoreButtons.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\StoreControl.Designer.vb">
+      <DependentUpon>StoreControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StoreControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tournament.vb" />
+    <Compile Include="User Controls\StorePages\ChatStorePage.Designer.vb">
+      <DependentUpon>ChatStorePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StorePages\ChatStorePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\StorePages\CardStorePage.Designer.vb">
+      <DependentUpon>CardStorePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StorePages\CardStorePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Donations.Designer.vb">
+      <DependentUpon>Donations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Donations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\StorePages\GetDiamondsStorePage.Designer.vb">
+      <DependentUpon>GetDiamondsStorePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StorePages\GetDiamondsStorePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\StorePages\HomeStorePage.Designer.vb">
+      <DependentUpon>HomeStorePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StorePages\HomeStorePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\StorePages\MysteryStorePage.Designer.vb">
+      <DependentUpon>MysteryStorePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StorePages\MysteryStorePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\StorePages\PrestigeStorePage.Designer.vb">
+      <DependentUpon>PrestigeStorePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StorePages\PrestigeStorePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\StorePages\ProfileStorePage.Designer.vb">
+      <DependentUpon>ProfileStorePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StorePages\ProfileStorePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\StorePages\TeamsStorePage.Designer.vb">
+      <DependentUpon>TeamsStorePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StorePages\TeamsStorePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\TeamButtons.Designer.vb">
+      <DependentUpon>TeamButtons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\TeamButtons.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\TeamPage.Designer.vb">
+      <DependentUpon>TeamPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\TeamPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TournamentInformation.Designer.vb">
+      <DependentUpon>TournamentInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TournamentInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\TournamentControl.Designer.vb">
+      <DependentUpon>TournamentControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\TournamentControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\TournamentList.Designer.vb">
+      <DependentUpon>TournamentList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\TournamentList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Qualification Challenge.Designer.vb">
+      <DependentUpon>Qualification Challenge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Qualification Challenge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\DeckSorting.Designer.vb">
+      <DependentUpon>DeckSorting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\DeckSorting.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DownloadDeckReplay.Designer.vb">
+      <DependentUpon>DownloadDeckReplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadDeckReplay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\UploadDeck.Designer.vb">
+      <DependentUpon>UploadDeck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UploadDeck.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\DeckProfileUC.Designer.vb">
+      <DependentUpon>DeckProfileUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\DeckProfileUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditProfile.Designer.vb">
+      <DependentUpon>EditProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailVerificationWarning.Designer.vb">
+      <DependentUpon>EmailVerificationWarning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EmailVerificationWarning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.vb">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HostForm.Designer.vb">
+      <DependentUpon>HostForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HostForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JARVIS.Designer.vb">
+      <DependentUpon>JARVIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JARVIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Launcher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Launcher.Designer.vb">
+      <DependentUpon>Launcher.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ChannelManager.vb" />
+    <Compile Include="News.Designer.vb">
+      <DependentUpon>News.vb</DependentUpon>
+    </Compile>
+    <Compile Include="News.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.vb">
+      <DependentUpon>Options.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Options.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrivateChat.Designer.vb">
+      <DependentUpon>PrivateChat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrivateChat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.vb">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandomD.Designer.vb">
+      <DependentUpon>RandomD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RandomD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.vb">
+      <DependentUpon>Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Set Chat Color.Designer.vb">
+      <DependentUpon>Set Chat Color.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Set Chat Color.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Set Title.Designer.vb">
+      <DependentUpon>Set Title.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Set Title.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket.vb" />
+    <Compile Include="CommunityCenter.Designer.vb">
+      <DependentUpon>CommunityCenter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CommunityCenter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AcceptQueue.resx">
+      <DependentUpon>AcceptQueue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Control Panel.resx">
+      <DependentUpon>Admin Control Panel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChallengeForm.resx">
+      <DependentUpon>ChallengeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Private Chat.resx">
+      <DependentUpon>Custom Private Chat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeckTest.resx">
+      <DependentUpon>DeckTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoundOpponent.resx">
+      <DependentUpon>FoundOpponent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MysteryBoxItems.resx">
+      <DependentUpon>MysteryBoxItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options_2.resx">
+      <DependentUpon>Options_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pending Deck.resx">
+      <DependentUpon>Pending Deck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostDuelMessage.resx">
+      <DependentUpon>PostDuelMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\CreateTournament.resx">
+      <DependentUpon>CreateTournament.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\NewsControl.resx">
+      <DependentUpon>NewsControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\DuelingRobot.resx">
+      <DependentUpon>DuelingRobot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\FrontDuelPage.resx">
+      <DependentUpon>FrontDuelPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\PvPDuelPage.resx">
+      <DependentUpon>PvPDuelPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\SinglePlayerDuelPage.resx">
+      <DependentUpon>SinglePlayerDuelPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\SkillTests.resx">
+      <DependentUpon>SkillTests.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\GameList.resx">
+      <DependentUpon>GameList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Buttons.resx">
+      <DependentUpon>Buttons.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StoreButtons.resx">
+      <DependentUpon>StoreButtons.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StoreControl.resx">
+      <DependentUpon>StoreControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StorePages\BordersStorePage.resx">
+      <DependentUpon>BordersStorePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StorePages\ChatStorePage.resx">
+      <DependentUpon>ChatStorePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StorePages\CardStorePage.resx">
+      <DependentUpon>CardStorePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donations.resx">
+      <DependentUpon>Donations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StorePages\GetDiamondsStorePage.resx">
+      <DependentUpon>GetDiamondsStorePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StorePages\HomeStorePage.resx">
+      <DependentUpon>HomeStorePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StorePages\MysteryStorePage.resx">
+      <DependentUpon>MysteryStorePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StorePages\PrestigeStorePage.resx">
+      <DependentUpon>PrestigeStorePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StorePages\ProfileStorePage.resx">
+      <DependentUpon>ProfileStorePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StorePages\TeamsStorePage.resx">
+      <DependentUpon>TeamsStorePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\TeamButtons.resx">
+      <DependentUpon>TeamButtons.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\TeamPage.resx">
+      <DependentUpon>TeamPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TournamentInformation.resx">
+      <DependentUpon>TournamentInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\TournamentControl.resx">
+      <DependentUpon>TournamentControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\TournamentList.resx">
+      <DependentUpon>TournamentList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qualification Challenge.resx">
+      <DependentUpon>Qualification Challenge.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\DeckSorting.resx">
+      <DependentUpon>DeckSorting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDeckReplay.resx">
+      <DependentUpon>DownloadDeckReplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UploadDeck.resx">
+      <DependentUpon>UploadDeck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\DeckProfileUC.resx">
+      <DependentUpon>DeckProfileUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProfile.resx">
+      <DependentUpon>EditProfile.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailVerificationWarning.resx">
+      <DependentUpon>EmailVerificationWarning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HostForm.resx">
+      <DependentUpon>HostForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JARVIS.resx">
+      <DependentUpon>JARVIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Launcher.resx">
+      <DependentUpon>Launcher.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News.resx">
+      <DependentUpon>News.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrivateChat.resx">
+      <DependentUpon>PrivateChat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RandomD.resx">
+      <DependentUpon>RandomD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Set Chat Color.resx">
+      <DependentUpon>Set Chat Color.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Set Title.resx">
+      <DependentUpon>Set Title.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommunityCenter.resx">
+      <DependentUpon>CommunityCenter.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C1.bmp" />
+    <None Include="Resources\C1.png" />
+    <None Include="Resources\T2.png" />
+    <None Include="Resources\T2-1.png" />
+    <None Include="Resources\T21.png" />
+    <None Include="Resources\T22.png" />
+    <None Include="Resources\TournamentsB.png" />
+    <None Include="Resources\CustomizeB.png" />
+    <None Include="Resources\ForumB.png" />
+    <None Include="Resources\UserListB.png" />
+    <None Include="Resources\CustomizeG.png" />
+    <None Include="Resources\ForumG.png" />
+    <None Include="Resources\UserListG.png" />
+    <None Include="Resources\FacebookB.png" />
+    <None Include="Resources\FacebookG.png" />
+    <None Include="Resources\SupportG.png" />
+    <None Include="Resources\SupportR.png" />
+    <None Include="Resources\TwitterB.png" />
+    <None Include="Resources\TwitterG.png" />
+    <None Include="Resources\%28flower%29.png" />
+    <None Include="Resources\%28fubar%29.png" />
+    <None Include="Resources\%28giggle%29.png" />
+    <None Include="Resources\%28handshake%29.png" />
+    <None Include="Resources\%28happy%29.png" />
+    <None Include="Resources\%28heart%29.png" />
+    <None Include="Resources\%28heidy%29.png" />
+    <None Include="Resources\%28hi%29.png" />
+    <None Include="Resources\%28highfive%29.png" />
+    <None Include="Resources\%28inlove%29.png" />
+    <None Include="Resources\%28itwasntme%29.png" />
+    <None Include="Resources\%28kiss%29.png" />
+    <None Include="Resources\%28lalala%29.png" />
+    <None Include="Resources\%28lipssealed%29.png" />
+    <None Include="Resources\%28mail%29.png" />
+    <None Include="Resources\%28makeup%29.png" />
+    <None Include="Resources\%28middlefinger%29.png" />
+    <None Include="Resources\%28mmm%29.png" />
+    <None Include="Resources\%28movie%29.png" />
+    <None Include="Resources\%28muscle%29.png" />
+    <None Include="Resources\%28music%29.png" />
+    <None Include="Resources\%28nerd%29.png" />
+    <None Include="Resources\%28no%29.png" />
+    <None Include="Resources\%28party%29.png" />
+    <None Include="Resources\%28phone%29.png" />
+    <None Include="Resources\%28pizza%29.png" />
+    <None Include="Resources\%28punch%29.png" />
+    <None Include="Resources\%28rain%29.png" />
+    <None Include="Resources\%28rock%29.png" />
+    <None Include="Resources\%28rofl%29.png" />
+    <None Include="Resources\%28sad%29.png" />
+    <None Include="Resources\%28shake%29.png" />
+    <None Include="Resources\%28sleepy%29.png" />
+    <None Include="Resources\%28smile%29.png" />
+    <None Include="Resources\%28smirk%29.png" />
+    <None Include="Resources\%28smoke%29.png" />
+    <None Include="Resources\%28speechless%29.png" />
+    <None Include="Resources\%28star%29.png" />
+    <None Include="Resources\%28sun%29.png" />
+    <None Include="Resources\%28swear%29.png" />
+    <None Include="Resources\%28sweating%29.png" />
+    <None Include="Resources\%28talking%29.png" />
+    <None Include="Resources\%28thinking%29.png" />
+    <None Include="Resources\%28time%29.png" />
+    <None Include="Resources\%28tmi%29.png" />
+    <None Include="Resources\%28tongueout%29.png" />
+    <None Include="Resources\%28tumbleweed%29.png" />
+    <None Include="Resources\%28wait%29.png" />
+    <None Include="Resources\%28waiting%29.png" />
+    <None Include="Resources\%28wfh%29.png" />
+    <None Include="Resources\%28whew%29.png" />
+    <None Include="Resources\%28wink%29.png" />
+    <None Include="Resources\%28wondering%29.png" />
+    <None Include="Resources\%28worried%29.png" />
+    <None Include="Resources\%28yawn%29.png" />
+    <None Include="Resources\%28yes%29.png" />
+    <None Include="Resources\%28angel%29.png" />
+    <None Include="Resources\%28angry%29.png" />
+    <None Include="Resources\%28bandit%29.png" />
+    <None Include="Resources\%28bear%29.png" />
+    <None Include="Resources\%28beer%29.png" />
+    <None Include="Resources\%28bigsmile%29.png" />
+    <None Include="Resources\%28blush%29.png" />
+    <None Include="Resources\%28brokenheart%29.png" />
+    <None Include="Resources\%28bug%29.png" />
+    <None Include="Resources\%28cake%29.png" />
+    <None Include="Resources\%28call%29.png" />
+    <None Include="Resources\%28cash%29.png" />
+    <None Include="Resources\%28clapping%29.png" />
+    <None Include="Resources\%28coffee%29.png" />
+    <None Include="Resources\%28cool%29.png" />
+    <None Include="Resources\%28crying%29.png" />
+    <None Include="Resources\%28devil%29.png" />
+    <None Include="Resources\%28doh%29.png" />
+    <None Include="Resources\%28drink%29.png" />
+    <None Include="Resources\%28drunk%29.png" />
+    <None Include="Resources\%28dull%29.png" />
+    <None Include="Resources\%28emo%29.png" />
+    <None Include="Resources\%28envy%29.png" />
+    <None Include="Resources\%28evilgrin%29.png" />
+    <None Include="Resources\Qualified3.bmp" />
+    <None Include="Resources\1s.png" />
+    <None Include="Resources\2s.png" />
+    <None Include="Resources\3s.png" />
+    <None Include="Resources\4s.png" />
+    <None Include="Resources\5s.png" />
+    <None Include="Resources\6s.png" />
+    <None Include="Resources\7s.png" />
+    <None Include="Resources\Logo Blue.png" />
+    <None Include="Resources\Logo Red.png" />
+    <None Include="Resources\Blue Red Eyes.png" />
+    <None Include="Resources\Red Red Eyes.png" />
+    <None Include="Resources\ChatB.png" />
+    <None Include="Resources\ChatG.png" />
+    <None Include="Resources\DecksB.png" />
+    <None Include="Resources\DecksG.png" />
+    <None Include="Resources\DuelB.png" />
+    <None Include="Resources\DuelG.png" />
+    <None Include="Resources\NewsB.png" />
+    <None Include="Resources\NewsG.png" />
+    <None Include="Resources\ProfileB.png" />
+    <None Include="Resources\ProfileG.png" />
+    <None Include="Resources\ReplaysB.png" />
+    <None Include="Resources\ReplaysG.png" />
+    <None Include="Resources\StoreB.png" />
+    <None Include="Resources\StoreG.png" />
+    <None Include="Resources\TeamsB.png" />
+    <None Include="Resources\TeamsG.png" />
+    <None Include="Resources\OptionsB.png" />
+    <None Include="Resources\OptionsG.png" />
+    <None Include="Resources\ConclaveC.png" />
+    <None Include="Resources\ConclaveC-HL.png" />
+    <None Include="Resources\DeckC.png" />
+    <None Include="Resources\DeckC-HL.png" />
+    <None Include="Resources\DuelC.png" />
+    <None Include="Resources\DuelC-HL.png" />
+    <None Include="Resources\HomeC.png" />
+    <None Include="Resources\HomeC-HL.png" />
+    <None Include="Resources\ProfileC.png" />
+    <None Include="Resources\ProfileC-HL.png" />
+    <None Include="Resources\ReplaysC.png" />
+    <None Include="Resources\ReplaysC-HL.png" />
+    <None Include="Resources\StoreC.png" />
+    <None Include="Resources\StoreC-HL.png" />
+    <None Include="Resources\TeamC.png" />
+    <None Include="Resources\TeamC-HL.png" />
+    <None Include="Resources\ChatC.png" />
+    <None Include="Resources\ChatC-HL.png" />
+    <None Include="Resources\Single Player Button BLUE.png" />
+    <None Include="Resources\PvPB.png" />
+    <None Include="Resources\PvPR.png" />
+    <None Include="Resources\SinglePlayerB.png" />
+    <None Include="Resources\SinglePlayerR.png" />
+    <None Include="Resources\CampaignB.png" />
+    <None Include="Resources\BackB.png" />
+    <None Include="Resources\BackR.png" />
+    <None Include="Resources\RankedB.png" />
+    <None Include="Resources\RankedR.png" />
+    <None Include="Resources\TournamentB.png" />
+    <None Include="Resources\TournamentR.png" />
+    <None Include="Resources\UnrankedB.png" />
+    <None Include="Resources\UnrankedR.png" />
+    <None Include="Resources\RankedBanner.png" />
+    <None Include="Resources\UnrankedBanner.png" />
+    <None Include="Resources\CampaignR.png" />
+    <None Include="Resources\News1.jpg" />
+    <None Include="Resources\News2.jpg" />
+    <None Include="Resources\News3.jpg" />
+    <None Include="Resources\News4.jpg" />
+    <None Include="Resources\News5.jpg" />
+    <None Include="Resources\postDuelWin1.png" />
+    <None Include="Resources\postDuelWin0.png" />
+    <None Include="Resources\postDuelLose0.png" />
+    <None Include="Resources\postDuelLose2.png" />
+    <None Include="Resources\postDuelLose1.png" />
+    <None Include="Resources\postDuelDraw.png" />
+    <None Include="Resources\postDuelWin2.png" />
+    <None Include="Resources\Me Comman Icon RED.png" />
+    <None Include="Resources\Me Command Icon.png" />
+    <None Include="Resources\Platinum Membership Icon RED.png" />
+    <None Include="Resources\Red Chat Color Icon RED.png" />
+    <None Include="Resources\Red Chat Color Icon.png" />
+    <None Include="Resources\Reset WP Icon RED.png" />
+    <None Include="Resources\Reset WP Icon.png" />
+    <None Include="Resources\Starcaller Icon RED.png" />
+    <None Include="Resources\Starcaller Icon.png" />
+    <None Include="Resources\Stormborn Icon RED.png" />
+    <None Include="Resources\Stormborn Icon.png" />
+    <None Include="Resources\ItemDuelSetoKaibaH.png" />
+    <None Include="Resources\ItemTeamMembersBonus.png" />
+    <None Include="Resources\ItemTeamMembersBonusH.png" />
+    <None Include="Resources\Item_StrikeoutChatFont.png" />
+    <None Include="Resources\Item_StrikeoutChatFontH.png" />
+    <None Include="Resources\Item_BlueChatColor.png" />
+    <None Include="Resources\Item_BlueChatColorH.png" />
+    <None Include="Resources\Item_BoldChatFont.png" />
+    <None Include="Resources\Item_BoldChatFontH.png" />
+    <None Include="Resources\Item_ChangeUsername.png" />
+    <None Include="Resources\Item_ChangeUsernameH.png" />
+    <None Include="Resources\Item_ChatBundle.png" />
+    <None Include="Resources\Item_ChatBundleH.png" />
+    <None Include="Resources\Item_ClassifiedAccess.png" />
+    <None Include="Resources\Item_ClassifiedAccessH.png" />
+    <None Include="Resources\Item_DiamondMembership.png" />
+    <None Include="Resources\Item_DiamondMembershipH.png" />
+    <None Include="Resources\Item_DuelSetoKaiba.png" />
+    <None Include="Resources\Item_DuelSetoKaibaH.png" />
+    <None Include="Resources\Item_EmoticonPack1.png" />
+    <None Include="Resources\Item_EmoticonPack1H.png" />
+    <None Include="Resources\Item_EmoticonPack2.png" />
+    <None Include="Resources\Item_EmoticonPack2H.png" />
+    <None Include="Resources\Item_FBIChatColor.png" />
+    <None Include="Resources\Item_FBIChatColorH.png" />
+    <None Include="Resources\Item_Firelord.png" />
+    <None Include="Resources\Item_FirelordH.png" />
+    <None Include="Resources\Item_GoldMembership.png" />
+    <None Include="Resources\Item_GoldMembershipH.png" />
+    <None Include="Resources\Item_GoldSarcophagus.png" />
+    <None Include="Resources\Item_GoldSarcophagusH.png" />
+    <None Include="Resources\Item_GreenChatColor.png" />
+    <None Include="Resources\Item_GreenChatColorH.png" />
+    <None Include="Resources\Item_ItalicChatFont.png" />
+    <None Include="Resources\Item_ItalicChatFontH.png" />
+    <None Include="Resources\Item_MeCommand.png" />
+    <None Include="Resources\Item_MeCommandH.png" />
+    <None Include="Resources\Item_PinkChatColor.png" />
+    <None Include="Resources\Item_PinkChatColorH.png" />
+    <None Include="Resources\Item_PlatinumMembership.png" />
+    <None Include="Resources\Item_PlatinumMembershipH.png" />
+    <None Include="Resources\Item_RainbowChatColor.png" />
+    <None Include="Resources\Item_RainbowChatColorH.png" />
+    <None Include="Resources\Item_RedChatColor.png" />
+    <None Include="Resources\Item_RedChatColorH.png" />
+    <None Include="Resources\Item_ResetWP.png" />
+    <None Include="Resources\Item_ResetWPH.png" />
+    <None Include="Resources\Item_Starcaller.png" />
+    <None Include="Resources\Item_StarcallerH.png" />
+    <None Include="Resources\Item_Stormborn.png" />
+    <None Include="Resources\Item_StormbornH.png" />
+    <None Include="Resources\Item_TeamMembersBonus.png" />
+    <None Include="Resources\Item_TeamMembersBonusH.png" />
+    <None Include="Resources\Item_UnderlineChatFont.png" />
+    <None Include="Resources\Item_UnderlineChatFontH.png" />
+    <None Include="Resources\Item_CustomFont.png" />
+    <None Include="Resources\Item_CustomFontH.png" />
+    <None Include="Resources\Item_AmethystMembershipH.png" />
+    <None Include="Resources\Item_CustomTitle.png" />
+    <None Include="Resources\Item_CustomTitleH.png" />
+    <None Include="Resources\Item_AmethystMembership.png" />
+    <None Include="Resources\emoticons-150528_1280.png" />
+    <None Include="Resources\%281happy%29.png" />
+    <None Include="Resources\%28emoticon1-1%29.png" />
+    <None Include="Resources\%281%29.png" />
+    <None Include="Resources\a2.png" />
+    <None Include="Resources\a3.png" />
+    <None Include="Resources\a4.png" />
+    <None Include="Resources\a5.png" />
+    <None Include="Resources\a6.png" />
+    <None Include="Resources\a7.png" />
+    <None Include="Resources\a8.png" />
+    <None Include="Resources\a9.png" />
+    <None Include="Resources\a10.png" />
+    <None Include="Resources\a11.png" />
+    <None Include="Resources\a12.png" />
+    <None Include="Resources\a13.png" />
+    <None Include="Resources\a14.png" />
+    <None Include="Resources\a15.png" />
+    <None Include="Resources\b2.png" />
+    <None Include="Resources\b3.png" />
+    <None Include="Resources\b4.png" />
+    <None Include="Resources\b5.png" />
+    <None Include="Resources\b6.png" />
+    <None Include="Resources\b7.png" />
+    <None Include="Resources\b8.png" />
+    <None Include="Resources\b9.png" />
+    <None Include="Resources\b10.png" />
+    <None Include="Resources\b11.png" />
+    <None Include="Resources\b12.png" />
+    <None Include="Resources\b13.png" />
+    <None Include="Resources\b14.png" />
+    <None Include="Resources\b15.png" />
+    <None Include="Resources\a16.png" />
+    <None Include="Resources\b16.png" />
+    <None Include="Resources\Item_Rexterra.png" />
+    <None Include="Resources\Item_RexterraH.png" />
+    <None Include="Resources\Item_TeamQuote.png" />
+    <None Include="Resources\Item_TeamQuoteH.png" />
+    <None Include="Resources\Item_Tidemaster.png" />
+    <None Include="Resources\Item_TidemasterH.png" />
+    <None Include="Resources\Item_TournamentHosting.png" />
+    <None Include="Resources\Item_TournamentHostingH.png" />
+    <None Include="Resources\Item_Avatar.png" />
+    <None Include="Resources\Item_AvatarCardBack.png" />
+    <None Include="Resources\Item_AvatarCardBackH.png" />
+    <None Include="Resources\Item_AvatarH.png" />
+    <None Include="Resources\Item_CardBack.png" />
+    <None Include="Resources\Item_CardBackH.png" />
+    <None Include="Resources\Item_CustomUsernameColor.png" />
+    <None Include="Resources\Item_CustomUsernameColorH.png" />
+    <None Include="Resources\Item_DuelLuna.png" />
+    <None Include="Resources\Item_DuelLunaH.png" />
+    <None Include="Resources\Item_LordOfLight.png" />
+    <None Include="Resources\Item_LordOfLightH.png" />
+    <None Include="Resources\Item_Nightshade.png" />
+    <None Include="Resources\Item_NightshadeH.png" />
+    <None Include="Resources\LargeMysteryBox.png" />
+    <None Include="Resources\MysteryBox.png" />
+    <None Include="Resources\LargeMysteryBoxSmall.png" />
+    <None Include="Resources\Blank Item.png" />
+    <None Include="Resources\Item_UnblockRanked.png" />
+    <None Include="Resources\Item_UnblockRankedH.png" />
+    <None Include="Resources\Default Private Chat Background.png" />
+    <None Include="Resources\Luna Background.png" />
+    <None Include="Resources\ad.jpg" />
+    <None Include="Resources\Item-TDOANEChallenge.png" />
+    <None Include="Resources\Item-TDOANEChallengeH.png" />
+    <None Include="Resources\Item_CustomBorder.png" />
+    <None Include="Resources\Item_CustomBorderH.png" />
+    <None Include="Resources\Item_AdBlock.png" />
+    <None Include="Resources\Item_AdBlockH.png" />
+    <None Include="Resources\Item_CustomPrivateChat.png" />
+    <None Include="Resources\Item_CustomPrivateChatH.png" />
+    <None Include="Resources\Item_CustomTextColor.png" />
+    <None Include="Resources\Item_CustomTextColorH.png" />
+    <None Include="Resources\DuelTek760B.png" />
+    <None Include="Resources\DuelTek760R.PNG" />
+    <None Include="Resources\DuelingRobotB.png" />
+    <None Include="Resources\DuelingRobotR.png" />
+    <None Include="Resources\PuzzlesB.png" />
+    <None Include="Resources\PuzzlesR.png" />
+    <None Include="Resources\SkillTestsB.png" />
+    <None Include="Resources\SkillTestsR.png" />
+    <None Include="Resources\W1.png" />
+    <Content Include="YGO PRO %28256x256%29.ico" />
+    <None Include="Resources\ForumsG.png" />
+    <None Include="Resources\ForumsB.png" />
+    <None Include="Resources\A1.png" />
+    <None Include="Resources\Qualified2.png" />
+    <None Include="Resources\Qualified1.png" />
+    <None Include="Resources\Star.png" />
+    <None Include="Resources\Q1.png" />
+    <None Include="Resources\D1.png" />
+    <None Include="Resources\B1.png" />
+    <None Include="Resources\S1.png" />
+    <None Include="Resources\P1.png" />
+    <None Include="Resources\M1.png" />
+    <None Include="Resources\GM1.png" />
+    <None Include="Resources\G1.png" />
+    <None Include="Resources\TDOANE Background.jpg" />
+    <None Include="Resources\CreateTeamR.png" />
+    <None Include="Resources\RankingG.png" />
+    <None Include="Resources\CreateTeamG.png" />
+    <None Include="Resources\RankingB.png" />
+    <None Include="Resources\CreateTeamB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
