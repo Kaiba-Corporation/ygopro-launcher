@@ -25,6 +25,7 @@ Partial Class EditProfile
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditProfile))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.A1 = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -246,9 +247,9 @@ Partial Class EditProfile
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.A1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.A1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProfilePicture, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -269,7 +270,6 @@ Partial Class EditProfile
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.A1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -365,6 +365,16 @@ Partial Class EditProfile
         Me.TabPage1.Size = New System.Drawing.Size(829, 289)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Overview"
+        '
+        'A1
+        '
+        Me.A1.BackColor = System.Drawing.Color.Transparent
+        Me.A1.Location = New System.Drawing.Point(41, 128)
+        Me.A1.Name = "A1"
+        Me.A1.Size = New System.Drawing.Size(20, 20)
+        Me.A1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.A1.TabIndex = 190
+        Me.A1.TabStop = False
         '
         'Label8
         '
@@ -2107,7 +2117,7 @@ Partial Class EditProfile
         '
         Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Right
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Items.AddRange(New Object() {"Player", "Gold Member", "Platinum Member", "Diamond Member", "5ds Border", "ARC-V Border", "Akiza Border", "Akiza Border II", "Alexis Border", "Ancient Bird", "Bakura Border I", "Bakura Border II", "Blue Border", "Blue-Eyes White Dragon", "Chazz Border", "Christmas Border I", "Christmas Border II", "Christmas Border III", "Christmas Border IV", "Christmas Border V", "Christmas Border VI", "Crow Border", "Cyan Border", "Dark Border", "Earth Border", "Exodia the Forbidden One", "Firelord", "GX Border", "Golem Fury", "Green Border", "Gundam Border", "Hata no Kokoro Border I", "Hata no Kokoro Border II", "Hatsune Miku", "Hatsune Miku II", "Hatsune Miku III", "Ishizu Border I", "Ishizu Border II", "Jack Border", "Jaden Border", "Jesse Border", "Kaiba Border", "King of Games", "Lazar Border", "Light Border", "Mai Border I", "Mai Border II", "Mai Border III", "Mako Border", "Marik Border I", "Marik Border II", "Millennium Border", "Ninja Border", "Odion Border", "Pegasus Border", "Pinkie Pie Border", "PowerPuff Girls Border", "Red Border", "Regi Border", "Reimu Hakurei Border I", "Reimu Hakurei Border II", "Reji Border", "Sakuya Izayoi Border I", "Sakuya Izayoi Border II", "Shark Border", "Sora Border", "Starcaller", "Sub Zero", "Susanoo Border", "Sylvan Frenzy", "The Colorful Border", "The Fire Border", "The Green Leaf", "The Rose Border", "The Seal of Orichalcos", "The Star", "Thief King Border I", "Thief King Border II", "Totally Spies Border", "United States of America", "Venam Border", "Water Border", "Water Border II", "Wind Border", "Yami Border I", "Yami Border II", "Yami Border III", "Yami Border IV", "Yami Border V", "Yori Border", "Yubel Border", "Yugi Border", "Yugo Border", "Yugo Border", "Yuri Border I", "Yuri Border II", "Yusei Border I", "Yusei Border II", "Yuto Border I", "Yuto Border II", "Yuto Border III", "Yuya Border", "Zane Border", "Zexal Border", "Moderator", "Global Moderator", "FBI", "Administrator", "CEO"})
+        Me.ListBox1.Items.AddRange(New Object() {"Player", "Gold Member", "Platinum Member", "Diamond Member", "5ds Border", "ARC-V Border", "Akiza Border", "Akiza Border II", "Alexis Border", "Ancient Bird", "Bakura Border I", "Bakura Border II", "Blue Border", "Blue-Eyes White Dragon", "Chazz Border", "Christmas Border I", "Christmas Border II", "Christmas Border III", "Christmas Border IV", "Christmas Border V", "Christmas Border VI", "Crow Border", "Cyan Border", "Dark Border", "Earth Border", "Exodia the Forbidden One", "Firelord", "GX Border", "Golem Fury", "Green Border", "Gundam Border", "Hata no Kokoro Border I", "Hata no Kokoro Border II", "Hatsune Miku", "Hatsune Miku II", "Hatsune Miku III", "Ishizu Border I", "Ishizu Border II", "Jack Border", "Jaden Border", "Jesse Border", "Kaiba Border", "King of Games", "Lazar Border", "Light Border", "Mai Border I", "Mai Border II", "Mai Border III", "Mako Border", "Marik Border I", "Marik Border II", "Millennium Border", "Ninja Border", "Odion Border", "Pegasus Border", "Pinkie Pie Border", "PowerPuff Girls Border", "Red Border", "Regi Border", "Reimu Hakurei Border I", "Reimu Hakurei Border II", "Reji Border", "Sakuya Izayoi Border I", "Sakuya Izayoi Border II", "Shark Border", "Sora Border", "Starcaller", "Sub Zero", "Susanoo Border", "Sylvan Frenzy", "The Colorful Border", "The Fire Border", "The Green Leaf", "The Rose Border", "The Seal of Orichalcos", "The Star", "Thief King Border I", "Thief King Border II", "Totally Spies Border", "United States of America", "Venom Border", "Water Border", "Water Border II", "Wind Border", "Yami Border I", "Yami Border II", "Yami Border III", "Yami Border IV", "Yami Border V", "Yori Border", "Yubel Border", "Yugi Border", "Yugo Border", "Yugo Border", "Yuri Border I", "Yuri Border II", "Yusei Border I", "Yusei Border II", "Yuto Border I", "Yuto Border II", "Yuto Border III", "Yuya Border", "Zane Border", "Zexal Border", "Moderator", "Global Moderator", "FBI", "Administrator", "CEO"})
         Me.ListBox1.Location = New System.Drawing.Point(660, 0)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(169, 289)
@@ -2768,16 +2778,6 @@ Partial Class EditProfile
         Me.PictureBox5.TabIndex = 135
         Me.PictureBox5.TabStop = False
         '
-        'A1
-        '
-        Me.A1.BackColor = System.Drawing.Color.Transparent
-        Me.A1.Location = New System.Drawing.Point(41, 128)
-        Me.A1.Name = "A1"
-        Me.A1.Size = New System.Drawing.Size(20, 20)
-        Me.A1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.A1.TabIndex = 190
-        Me.A1.TabStop = False
-        '
         'EditProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2797,6 +2797,7 @@ Partial Class EditProfile
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.A1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProfilePicture, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2821,7 +2822,6 @@ Partial Class EditProfile
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.A1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

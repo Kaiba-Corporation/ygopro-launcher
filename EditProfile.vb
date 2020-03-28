@@ -1093,7 +1093,7 @@
             border = 59
         ElseIf ListBox1.SelectedItem = "Susanoo Border" Then
             border = 60
-        ElseIf ListBox1.SelectedItem = "Venam Border" Then
+        ElseIf ListBox1.SelectedItem = "Venom Border" Then
             border = 61
         ElseIf ListBox1.SelectedItem = "Sylvan Frenzy" Then
             border = 63
@@ -1279,10 +1279,16 @@
             border = 155
         ElseIf ListBox1.SelectedItem = "Specialiskid1 Border" Then
             border = 156
-        ElseIf ListBox1.SelectedItem = "Melibell Border" Then
+        ElseIf ListBox1.SelectedItem = "Melibell Border I" Then
             border = 157
         ElseIf ListBox1.SelectedItem = "Unixez Border" Then
             border = 158
+        ElseIf ListBox1.SelectedItem = "Melibell Border II" Then
+            border = 159
+        ElseIf ListBox1.SelectedItem = "Melibell Border III" Then
+            border = 160
+        ElseIf ListBox1.SelectedItem = "Pumpkinstraw09 Border" Then
+            border = 161
         End If
 
         If borderList.Contains(border) Then
@@ -1417,7 +1423,7 @@
             border = 59
         ElseIf ListBox1.SelectedItem = "Susanoo Border" Then
             border = 60
-        ElseIf ListBox1.SelectedItem = "Venam Border" Then
+        ElseIf ListBox1.SelectedItem = "Venom Border" Then
             border = 61
         ElseIf ListBox1.SelectedItem = "Sylvan Frenzy" Then
             border = 63
@@ -1603,10 +1609,16 @@
             border = 155
         ElseIf ListBox1.SelectedItem = "Specialiskid1 Border" Then
             border = 156
-        ElseIf ListBox1.SelectedItem = "Melibell Border" Then
+        ElseIf ListBox1.SelectedItem = "Melibell Border I" Then
             border = 157
         ElseIf ListBox1.SelectedItem = "Unixez Border" Then
             border = 158
+        ElseIf ListBox1.SelectedItem = "Melibell Border II" Then
+            border = 159
+        ElseIf ListBox1.SelectedItem = "Melibell Border III" Then
+            border = 160
+        ElseIf ListBox1.SelectedItem = "Pumpkinstraw09 Border" Then
+            border = 161
         End If
 
         Try
@@ -2015,10 +2027,15 @@
             ListBox1.Items.Add("Specialiskid1 Border")
         End If
         If Launcher.Username = "Melibell" Then
-            ListBox1.Items.Add("Melibell Border")
+            ListBox1.Items.Add("Melibell Border I")
+            ListBox1.Items.Add("Melibell Border II")
+            ListBox1.Items.Add("Melibell Border III")
         End If
         If Launcher.Username = "Unixez" Then
             ListBox1.Items.Add("Unixez Border")
+        End If
+        If Launcher.Username = "Pumpkinstraw09" Then
+            ListBox1.Items.Add("Pumpkinstraw09 Border")
         End If
     End Sub
 
