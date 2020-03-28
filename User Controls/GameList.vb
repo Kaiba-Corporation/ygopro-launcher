@@ -83,7 +83,7 @@ Public Class GameList
         Dim gameColor As New Color
         If game.status = "Dueling" Then
             gameColor = Color.FromArgb(228, 228, 228)
-        ElseIf game.banlist = "No Banlist" Or (game.additionalRules <> "Additional Rules: None" And game.additionalRules <> "Rules: Don't Recover Time") Then
+        ElseIf game.banlist = "No Banlist" Or (game.additionalRules <> "Additional Rules: None" And game.additionalRules <> "Rules: 7 Minute Timer") Then
             gameColor = Color.FromArgb(255, 210, 210)
         ElseIf game.type = "Single" Then
             gameColor = Color.FromArgb(192, 255, 192)

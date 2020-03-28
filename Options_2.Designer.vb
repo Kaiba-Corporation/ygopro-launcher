@@ -25,7 +25,6 @@ Partial Class Options_2
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Options_2))
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.dontRecoverTimeChb = New System.Windows.Forms.CheckBox()
         Me.masterRulesCmBox = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.allowedCardsCmBox = New System.Windows.Forms.ComboBox()
@@ -100,6 +99,8 @@ Partial Class Options_2
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.editGameSettingsBtn = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.turnTimerCmBox = New System.Windows.Forms.ComboBox()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -128,8 +129,9 @@ Partial Class Options_2
         'GroupBox6
         '
         Me.GroupBox6.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox6.Controls.Add(Me.turnTimerCmBox)
+        Me.GroupBox6.Controls.Add(Me.Label19)
         Me.GroupBox6.Controls.Add(Me.Button1)
-        Me.GroupBox6.Controls.Add(Me.dontRecoverTimeChb)
         Me.GroupBox6.Controls.Add(Me.masterRulesCmBox)
         Me.GroupBox6.Controls.Add(Me.Label18)
         Me.GroupBox6.Controls.Add(Me.allowedCardsCmBox)
@@ -166,18 +168,6 @@ Partial Class Options_2
         Me.Button1.TabIndex = 30
         Me.Button1.Text = "Default"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'dontRecoverTimeChb
-        '
-        Me.dontRecoverTimeChb.AutoSize = True
-        Me.dontRecoverTimeChb.BackColor = System.Drawing.Color.Transparent
-        Me.dontRecoverTimeChb.ForeColor = System.Drawing.Color.White
-        Me.dontRecoverTimeChb.Location = New System.Drawing.Point(21, 167)
-        Me.dontRecoverTimeChb.Name = "dontRecoverTimeChb"
-        Me.dontRecoverTimeChb.Size = New System.Drawing.Size(121, 17)
-        Me.dontRecoverTimeChb.TabIndex = 69
-        Me.dontRecoverTimeChb.Text = "Don't Recover Time"
-        Me.dontRecoverTimeChb.UseVisualStyleBackColor = False
         '
         'masterRulesCmBox
         '
@@ -329,7 +319,7 @@ Partial Class Options_2
         Me.Label43.BackColor = System.Drawing.Color.Transparent
         Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label43.ForeColor = System.Drawing.Color.White
-        Me.Label43.Location = New System.Drawing.Point(18, 145)
+        Me.Label43.Location = New System.Drawing.Point(18, 168)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(114, 13)
         Me.Label43.TabIndex = 54
@@ -969,6 +959,27 @@ Partial Class Options_2
         Me.editGameSettingsBtn.Text = "Edit Game Settings"
         Me.editGameSettingsBtn.UseVisualStyleBackColor = False
         '
+        'turnTimerCmBox
+        '
+        Me.turnTimerCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.turnTimerCmBox.FormattingEnabled = True
+        Me.turnTimerCmBox.Items.AddRange(New Object() {"3 Minutes", "7 Minutes"})
+        Me.turnTimerCmBox.Location = New System.Drawing.Point(107, 135)
+        Me.turnTimerCmBox.Name = "turnTimerCmBox"
+        Me.turnTimerCmBox.Size = New System.Drawing.Size(143, 21)
+        Me.turnTimerCmBox.TabIndex = 72
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.ForeColor = System.Drawing.Color.White
+        Me.Label19.Location = New System.Drawing.Point(17, 138)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(61, 13)
+        Me.Label19.TabIndex = 71
+        Me.Label19.Text = "Turn Timer:"
+        '
         'Options_2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1021,7 +1032,6 @@ Partial Class Options_2
 
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents dontRecoverTimeChb As CheckBox
     Friend WithEvents masterRulesCmBox As ComboBox
     Friend WithEvents Label18 As Label
     Friend WithEvents allowedCardsCmBox As ComboBox
@@ -1096,4 +1106,6 @@ Partial Class Options_2
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents editGameSettingsBtn As Button
     Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents turnTimerCmBox As ComboBox
+    Friend WithEvents Label19 As Label
 End Class

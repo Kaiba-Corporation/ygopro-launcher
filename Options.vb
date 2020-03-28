@@ -139,9 +139,9 @@ Public Class Options
         masterRulesCmBox.Text = My.Settings.hostMasterRules
 
         If My.Settings.hostDontRecoverTime Then
-            dontRecoverTimeChb.Checked = True
+            turnTimerCmBox.SelectedIndex = 1
         Else
-            dontRecoverTimeChb.Checked = False
+            turnTimerCmBox.SelectedIndex = 0
         End If
         If My.Settings.hostDontShuffleDeck Then
             dontShuffleDeckChb.Checked = True
@@ -236,7 +236,7 @@ Public Class Options
         allowedCardsCmBox.Text = "TCG/OCG"
         duelModeCmBox.Text = "Single Duel"
         masterRulesCmBox.Text = "Rule 4 (Links)"
-        dontRecoverTimeChb.Checked = False
+        turnTimerCmBox.SelectedIndex = 0
         dontShuffleDeckChb.Checked = False
         dontCheckDeckChb.Checked = False
         startingLP.Text = "8000"
@@ -806,7 +806,7 @@ Public Class Options
         My.Settings.hostDuelMode = duelModeCmBox.Text
         My.Settings.hostMasterRules = masterRulesCmBox.Text
 
-        If dontRecoverTimeChb.Checked Then
+        If turnTimerCmBox.SelectedIndex = 1 Then
             My.Settings.hostDontRecoverTime = True
         Else
             My.Settings.hostDontRecoverTime = False

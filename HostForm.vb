@@ -90,7 +90,7 @@ Public Class HostForm
                 d = 0
                 If (dontCheckDeckChb.Checked) Then d += 1
                 If (dontShuffleDeckChb.Checked) Then d += 2
-                If (dontRecoverTimeChb.Checked) Then d += 4
+                If (turnTimerCmBox.SelectedIndex = 1) Then d += 4
 
                 If masterRulesCmBox.Text = "Rule 1 (Original)" Then
                     h = 1
@@ -271,10 +271,11 @@ Public Class HostForm
             duelModeCmBox.SelectedIndex = 0
             banlistCmBox.SelectedIndex = 0
             allowedCardsCmBox.SelectedIndex = 0
+            turnTimerCmBox.SelectedIndex = 0
 
             allowedCardsCmBox.Enabled = False
             masterRulesCmBox.Enabled = False
-            dontRecoverTimeChb.Enabled = False
+            turnTimerCmBox.Enabled = False
             dontShuffleDeckChb.Enabled = False
             dontCheckDeckChb.Enabled = False
             startingLP.Enabled = False
@@ -287,9 +288,9 @@ Public Class HostForm
             masterRulesCmBox.Text = My.Settings.hostMasterRules
 
             If My.Settings.hostDontRecoverTime Then
-                dontRecoverTimeChb.Checked = True
+                turnTimerCmBox.SelectedIndex = 1
             Else
-                dontRecoverTimeChb.Checked = False
+                turnTimerCmBox.SelectedIndex = 0
             End If
             If My.Settings.hostDontShuffleDeck Then
                 dontShuffleDeckChb.Checked = True
@@ -316,7 +317,7 @@ Public Class HostForm
         My.Settings.hostDuelMode = duelModeCmBox.Text
         My.Settings.hostMasterRules = masterRulesCmBox.Text
 
-        If dontRecoverTimeChb.Checked Then
+        If turnTimerCmBox.SelectedIndex = 1 Then
             My.Settings.hostDontRecoverTime = True
         Else
             My.Settings.hostDontRecoverTime = False
