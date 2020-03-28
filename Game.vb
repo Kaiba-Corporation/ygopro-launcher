@@ -99,13 +99,13 @@
                 ElseIf name(4) = "3" Then
                     additionalRules = "Rules: Don't Check Deck, Don't Shuffle Deck"
                 ElseIf name(4) = "4" Then
-                    additionalRules = "Rules: Don't Recover Time"
+                    additionalRules = "Rules: 7 Minute Timer"
                 ElseIf name(4) = "5" Then
-                    additionalRules = "Rules: Don't Check Deck, Don't Recover Time"
+                    additionalRules = "Rules: Don't Check Deck, 7 Minute Timer"
                 ElseIf name(4) = "6" Then
-                    additionalRules = "Rules: Don't Shuffle Deck, Don't Recover Time"
+                    additionalRules = "Rules: Don't Shuffle Deck, 7 Minute Timer"
                 ElseIf name(4) = "7" Then
-                    additionalRules = "Rules: Don't Check Deck, Don't Shuffle Deck, Don't Recover Time"
+                    additionalRules = "Rules: Don't Check Deck, Don't Shuffle Deck, 7 Minute Timer"
                 End If
             End If
         End If
