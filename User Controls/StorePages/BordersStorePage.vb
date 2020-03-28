@@ -153,8 +153,8 @@
             border = 60
             price = 300
             currency = "Diamonds"
-        ElseIf ListBox1.SelectedItem = "Venam Border" Then
-            border = 613
+        ElseIf ListBox1.SelectedItem = "Venom Border" Then
+            border = 61
             price = 300
             currency = "Diamonds"
         ElseIf ListBox1.SelectedItem = "Yugo Border" Then
