@@ -22,13 +22,13 @@
             Dim sParts() As String = Split(newLastLoginDate, " ")
             lastLoginDate = sParts(0)
 
-            Dim timeSpanThisMonth As TimeSpan = TimeSpan.FromMilliseconds(newTimeOnlineThisMonth)
+            Dim timeSpanThisMonth As TimeSpan = TimeSpan.FromSeconds(newTimeOnlineThisMonth)
             timeOnlineThisMonth = timeSpanThisMonth.Days & " Days  " & AddZero(timeSpanThisMonth.Hours) & ":" & AddZero(timeSpanThisMonth.Minutes) & ":" & AddZero(timeSpanThisMonth.Seconds)
-            Dim timeSpanLastMonth As TimeSpan = TimeSpan.FromMilliseconds(newTimeOnlineLastMonth)
+            Dim timeSpanLastMonth As TimeSpan = TimeSpan.FromSeconds(newTimeOnlineLastMonth)
             timeOnlineLastMonth = timeSpanLastMonth.Days & " Days  " & AddZero(timeSpanLastMonth.Hours) & ":" & AddZero(timeSpanLastMonth.Minutes) & ":" & AddZero(timeSpanLastMonth.Seconds)
-            Dim timeSpantimeOnlineTotal As TimeSpan = TimeSpan.FromMilliseconds(newTimeOnlineTotal)
+            Dim timeSpantimeOnlineTotal As TimeSpan = TimeSpan.FromSeconds(newTimeOnlineTotal)
             timeOnlineTotal = timeSpantimeOnlineTotal.Days & " Days  " & AddZero(timeSpantimeOnlineTotal.Hours) & ":" & AddZero(timeSpantimeOnlineTotal.Minutes) & ":" & AddZero(timeSpantimeOnlineTotal.Seconds)
-            Dim timeSpanThisWeek As TimeSpan = TimeSpan.FromMilliseconds(newTimeOnlineThisWeek)
+            Dim timeSpanThisWeek As TimeSpan = TimeSpan.FromSeconds(newTimeOnlineThisWeek)
             timeOnlineThisWeek = timeSpanThisWeek.Days & " Days  " & AddZero(timeSpanThisWeek.Hours) & ":" & AddZero(timeSpanThisWeek.Minutes) & ":" & AddZero(timeSpanThisWeek.Seconds)
 
             If rank = "Moderator" Then

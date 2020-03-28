@@ -1,4 +1,4 @@
-﻿Imports System
+Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
@@ -239,7 +239,16 @@ Public Class Launcher
         gameVersion.Location = New Point(Me.Width - (gameVersion.Size.Width + 7), gameVersion.Location.Y)
 
         AdminList.Add("J.A.R.V.I.S.:Bot")
-        ComboBox1.Text = My.Settings.Language
+
+        If (My.Settings.Language = "German") Then
+            ComboBox1.SelectedIndex = 1
+        ElseIf (My.Settings.Language = "French") Then
+            ComboBox1.SelectedIndex = 2
+        ElseIf (My.Settings.Language = "Spanish") Then
+            ComboBox1.SelectedIndex = 3
+        Else
+            ComboBox1.SelectedIndex = 0
+        End If
 
         If My.Settings.ToS = 0 Then
             CheckBox2.Checked = False
@@ -261,10 +270,20 @@ Public Class Launcher
         ListBox1.BackColor = My.Settings.Userlist
         ListBox2.BackColor = My.Settings.Userlist
         ListBox4.BackColor = My.Settings.Userlist
+
+        If My.Settings.SelectedServer = -1 Then
+            Dim rand As New Random
+            My.Settings.SelectedServer = rand.Next(0, 2)
+            My.Settings.Save()
+        End If
+        selectServerCmBox.SelectedIndex = My.Settings.SelectedServer
     End Sub
 
     Private Sub LoginBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoginBtn.Click
         Try
+            My.Settings.SelectedServer = selectServerCmBox.SelectedIndex
+            My.Settings.Save()
+
             Label12.Text = "Connecting..."
             If My.Settings.SavedCheck = 1 Then
                 My.Settings.SavedUsername = TextBox1.Text
@@ -301,14 +320,14 @@ Public Class Launcher
             Dim HTML As String
             Dim sParts() As String
             Try
-                Url = ygoproUrl1
+                Url = ygoproUrl1 & "?server=" & My.Settings.SelectedServer
                 HTML = Client.DownloadString(New Uri(Url))
             Catch
                 Try
-                    Url = ygoproUrl2
+                    Url = ygoproUrl2 & "?server=" & My.Settings.SelectedServer
                     HTML = Client.DownloadString(New Uri(Url))
                 Catch
-                    Url = ygoproUrl3
+                    Url = ygoproUrl3 & "?server=" & My.Settings.SelectedServer
                     HTML = Client.DownloadString(New Uri(Url))
                 End Try
             End Try
@@ -355,14 +374,14 @@ Public Class Launcher
             Dim HTML As String
             Dim sParts() As String
             Try
-                Url = ygoproUrl1
+                Url = ygoproUrl1 & "?server=" & My.Settings.SelectedServer
                 HTML = Client.DownloadString(New Uri(Url))
             Catch
                 Try
-                    Url = ygoproUrl2
+                    Url = ygoproUrl2 & "?server=" & My.Settings.SelectedServer
                     HTML = Client.DownloadString(New Uri(Url))
                 Catch
-                    Url = ygoproUrl3
+                    Url = ygoproUrl3 & "?server=" & My.Settings.SelectedServer
                     HTML = Client.DownloadString(New Uri(Url))
                 End Try
             End Try
@@ -466,6 +485,8 @@ Public Class Launcher
 
 #Region "Buttons"
     Private Sub RegisterBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RegisterBtn.Click
+        My.Settings.SelectedServer = selectServerCmBox.SelectedIndex
+        My.Settings.Save()
         Register.Show()
     End Sub
 
@@ -1020,7 +1041,7 @@ Public Class Launcher
                 End If
             End If
             sParts = Split(RichTextBox2.Text, "masspm")
-            If Rank = "Owner" Or Username = "Malcolm Merlyn" Or Username = "DeharaRules" Then
+            If Rank = "Owner" Or Username = "Malcolm Merlyn" Then
                 If sParts(0) = "/" Then
                     Try
                         Dim Message = InputBox("Message:")
@@ -2707,7 +2728,7 @@ Public Class Launcher
                 End If
 
                 Dim timeOnlineOverall As String
-                Dim timeOnlineOverallHours As Double = Math.Round(((sParts(17) / 1000) / 60) / 60, 1)
+                Dim timeOnlineOverallHours As Double = Math.Round((sParts(17) / 60) / 60, 1)
 
                 If timeOnlineOverallHours > 24 Then
                     Dim daysPrefix As String = "Days"
@@ -2736,7 +2757,7 @@ Public Class Launcher
                 End If
 
                 Dim timeOnlineLastWeek As String
-                Dim timeOnlineLastWeekHours As Double = Math.Round(((sParts(18) / 1000) / 60) / 60, 1)
+                Dim timeOnlineLastWeekHours As Double = Math.Round((sParts(18) / 60) / 60, 1)
 
                 If timeOnlineLastWeekHours > 24 Then
                     Dim daysPrefix As String = "Days"
@@ -2765,7 +2786,7 @@ Public Class Launcher
                 End If
 
                 Dim timeOnlineLastMonth As String
-                Dim timeOnlineLastMonthHours As Double = Math.Round(((sParts(19) / 1000) / 60) / 60, 1)
+                Dim timeOnlineLastMonthHours As Double = Math.Round((sParts(19) / 60) / 60, 1)
 
                 If timeOnlineLastMonthHours > 24 Then
                     Dim daysPrefix As String = "Days"
@@ -2794,7 +2815,7 @@ Public Class Launcher
                 End If
 
                 Dim timeOnlineThisMonth As String
-                Dim timeOnlineThisMonthHours As Double = Math.Round(((sParts(20) / 1000) / 60) / 60, 1)
+                Dim timeOnlineThisMonthHours As Double = Math.Round((sParts(20) / 60) / 60, 1)
 
                 If timeOnlineThisMonthHours > 24 Then
                     Dim daysPrefix As String = "Days"
@@ -2823,7 +2844,7 @@ Public Class Launcher
                 End If
 
                 Dim timeOnlineThisWeek As String
-                Dim timeOnlineThisWeekHours As Double = Math.Round(((sParts(21) / 1000) / 60) / 60, 1)
+                Dim timeOnlineThisWeekHours As Double = Math.Round((sParts(21) / 60) / 60, 1)
 
                 If timeOnlineThisWeekHours > 24 Then
                     Dim daysPrefix As String = "Days"
@@ -6712,14 +6733,14 @@ Public Class Launcher
             Dim HTML As String
             Dim sParts() As String
             Try
-                Url = ygoproUrl1
+                Url = ygoproUrl1 & "?server=" & My.Settings.SelectedServer
                 HTML = Client.DownloadString(New Uri(Url))
             Catch
                 Try
-                    Url = ygoproUrl2
+                    Url = ygoproUrl2 & "?server=" & My.Settings.SelectedServer
                     HTML = Client.DownloadString(New Uri(Url))
                 Catch
-                    Url = ygoproUrl3
+                    Url = ygoproUrl3 & "?server=" & My.Settings.SelectedServer
                     HTML = Client.DownloadString(New Uri(Url))
                 End Try
             End Try
@@ -6809,6 +6830,8 @@ Public Class Launcher
     End Sub
 
     Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
+        My.Settings.SelectedServer = selectServerCmBox.SelectedIndex
+        My.Settings.Save()
         ForgotPassword.Show()
     End Sub
 #End Region

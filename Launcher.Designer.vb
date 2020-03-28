@@ -94,6 +94,9 @@ Partial Class Launcher
         Me.rankedQueueTimer = New System.Windows.Forms.Timer(Me.components)
         Me.donationsTimer = New System.Windows.Forms.Timer(Me.components)
         Me.LoginPanel = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.selectServerCmBox = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.gameVersion = New System.Windows.Forms.Label()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -116,7 +119,6 @@ Partial Class Launcher
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.RegisterBtn = New System.Windows.Forms.Button()
         Me.LoginBtn = New System.Windows.Forms.Button()
@@ -876,6 +878,9 @@ Partial Class Launcher
         '
         Me.LoginPanel.BackColor = System.Drawing.Color.Black
         Me.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.LoginPanel.Controls.Add(Me.Label1)
+        Me.LoginPanel.Controls.Add(Me.selectServerCmBox)
+        Me.LoginPanel.Controls.Add(Me.Label3)
         Me.LoginPanel.Controls.Add(Me.gameVersion)
         Me.LoginPanel.Controls.Add(Me.PictureBox6)
         Me.LoginPanel.Controls.Add(Me.Button1)
@@ -898,7 +903,6 @@ Partial Class Launcher
         Me.LoginPanel.Controls.Add(Me.Label4)
         Me.LoginPanel.Controls.Add(Me.CheckBox4)
         Me.LoginPanel.Controls.Add(Me.ComboBox1)
-        Me.LoginPanel.Controls.Add(Me.Label1)
         Me.LoginPanel.Controls.Add(Me.CheckBox2)
         Me.LoginPanel.Controls.Add(Me.RegisterBtn)
         Me.LoginPanel.Controls.Add(Me.LoginBtn)
@@ -909,6 +913,39 @@ Partial Class Launcher
         Me.LoginPanel.Name = "LoginPanel"
         Me.LoginPanel.Size = New System.Drawing.Size(927, 467)
         Me.LoginPanel.TabIndex = 100
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Aqua
+        Me.Label1.Location = New System.Drawing.Point(578, 445)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(58, 13)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Language:"
+        '
+        'selectServerCmBox
+        '
+        Me.selectServerCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.selectServerCmBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.selectServerCmBox.FormattingEnabled = True
+        Me.selectServerCmBox.Items.AddRange(New Object() {"#1 Blue-Eyes White Dragon", "#2 Dark Magician"})
+        Me.selectServerCmBox.Location = New System.Drawing.Point(408, 442)
+        Me.selectServerCmBox.Name = "selectServerCmBox"
+        Me.selectServerCmBox.Size = New System.Drawing.Size(159, 21)
+        Me.selectServerCmBox.TabIndex = 81
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Aqua
+        Me.Label3.Location = New System.Drawing.Point(365, 445)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(41, 13)
+        Me.Label3.TabIndex = 82
+        Me.Label3.Text = "Server:"
         '
         'gameVersion
         '
@@ -933,7 +970,7 @@ Partial Class Launcher
         '
         Me.Button1.BackColor = System.Drawing.Color.White
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(525, 441)
+        Me.Button1.Location = New System.Drawing.Point(738, 441)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 79
@@ -1104,25 +1141,14 @@ Partial Class Launcher
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"English", "German", "French", "Spanish"})
-        Me.ComboBox1.Location = New System.Drawing.Point(665, 442)
+        Me.ComboBox1.Location = New System.Drawing.Point(638, 442)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(86, 21)
         Me.ComboBox1.TabIndex = 7
-        Me.ComboBox1.Text = "English"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Aqua
-        Me.Label1.Location = New System.Drawing.Point(606, 446)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 13)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Language:"
         '
         'CheckBox2
         '
@@ -1641,4 +1667,6 @@ Partial Class Launcher
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents postDuelMessageTimer As Timer
     Friend WithEvents Button3 As Button
+    Friend WithEvents selectServerCmBox As ComboBox
+    Friend WithEvents Label3 As Label
 End Class
