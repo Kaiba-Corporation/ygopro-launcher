@@ -7,6 +7,11 @@ Public Class GameList
     Public gameList As New List(Of Game)
 
     Private Sub GameList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If gameListType = "Ranked" Then
+            randomDuelBtn.Hide()
+            refreshBtn.Location = New Point(753, 260)
+        End If
+
         'If gameListType = "Unranked" Then
         Panel2.Hide()
         Label4.Hide()

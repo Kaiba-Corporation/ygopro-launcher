@@ -434,7 +434,6 @@ Partial Class ChallengeForm
         Me.rule5.Name = "rule5"
         Me.rule5.Size = New System.Drawing.Size(112, 17)
         Me.rule5.TabIndex = 14
-        Me.rule5.TabStop = True
         Me.rule5.Text = "Rule 5 (April 2020)"
         Me.rule5.UseVisualStyleBackColor = True
         '
@@ -462,13 +461,11 @@ Partial Class ChallengeForm
         'rule4
         '
         Me.rule4.AutoSize = True
-        Me.rule4.Checked = True
         Me.rule4.ForeColor = System.Drawing.Color.White
         Me.rule4.Location = New System.Drawing.Point(19, 99)
         Me.rule4.Name = "rule4"
         Me.rule4.Size = New System.Drawing.Size(90, 17)
         Me.rule4.TabIndex = 10
-        Me.rule4.TabStop = True
         Me.rule4.Text = "Rule 4 (Links)"
         Me.rule4.UseVisualStyleBackColor = True
         '

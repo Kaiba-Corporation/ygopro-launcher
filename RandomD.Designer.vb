@@ -41,12 +41,12 @@ Partial Class RandomD
         Me.banlistTCG = New System.Windows.Forms.RadioButton()
         Me.banlistOCG = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.rule5 = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.rule3 = New System.Windows.Forms.RadioButton()
         Me.rule4 = New System.Windows.Forms.RadioButton()
         Me.rule1 = New System.Windows.Forms.RadioButton()
         Me.rule2 = New System.Windows.Forms.RadioButton()
-        Me.rule5 = New System.Windows.Forms.RadioButton()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -259,6 +259,19 @@ Partial Class RandomD
         Me.GroupBox4.TabIndex = 23
         Me.GroupBox4.TabStop = False
         '
+        'rule5
+        '
+        Me.rule5.AutoSize = True
+        Me.rule5.Checked = True
+        Me.rule5.ForeColor = System.Drawing.Color.White
+        Me.rule5.Location = New System.Drawing.Point(19, 122)
+        Me.rule5.Name = "rule5"
+        Me.rule5.Size = New System.Drawing.Size(112, 17)
+        Me.rule5.TabIndex = 14
+        Me.rule5.TabStop = True
+        Me.rule5.Text = "Rule 5 (April 2020)"
+        Me.rule5.UseVisualStyleBackColor = True
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -283,13 +296,11 @@ Partial Class RandomD
         'rule4
         '
         Me.rule4.AutoSize = True
-        Me.rule4.Checked = True
         Me.rule4.ForeColor = System.Drawing.Color.White
         Me.rule4.Location = New System.Drawing.Point(19, 99)
         Me.rule4.Name = "rule4"
         Me.rule4.Size = New System.Drawing.Size(90, 17)
         Me.rule4.TabIndex = 10
-        Me.rule4.TabStop = True
         Me.rule4.Text = "Rule 4 (Links)"
         Me.rule4.UseVisualStyleBackColor = True
         '
@@ -314,17 +325,6 @@ Partial Class RandomD
         Me.rule2.TabIndex = 8
         Me.rule2.Text = "Rule 2 (Synchro / XYZ)"
         Me.rule2.UseVisualStyleBackColor = True
-        '
-        'rule5
-        '
-        Me.rule5.AutoSize = True
-        Me.rule5.ForeColor = System.Drawing.Color.White
-        Me.rule5.Location = New System.Drawing.Point(19, 122)
-        Me.rule5.Name = "rule5"
-        Me.rule5.Size = New System.Drawing.Size(112, 17)
-        Me.rule5.TabIndex = 14
-        Me.rule5.Text = "Rule 5 (April 2020)"
-        Me.rule5.UseVisualStyleBackColor = True
         '
         'RandomD
         '

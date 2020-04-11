@@ -266,7 +266,7 @@ Public Class HostForm
             allowedCardsCmBox.Items.Clear()
             allowedCardsCmBox.Items.Add("Same as Banlist")
             masterRulesCmBox.Items.Clear()
-            masterRulesCmBox.Items.Add("Rule 4 (Links)")
+            masterRulesCmBox.Items.Add("Rule 5 (April 2020)")
             masterRulesCmBox.SelectedIndex = 0
             duelModeCmBox.SelectedIndex = 0
             banlistCmBox.SelectedIndex = 0
@@ -339,5 +339,15 @@ Public Class HostForm
 
         My.Settings.Save()
         MsgBox("Settings have been saved as default!")
+    End Sub
+
+    Private Sub duelModeCmBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles duelModeCmBox.SelectedIndexChanged
+        If gameType = "Ranked" Or (My.Settings.hostStartingLP = "8000" And My.Settings.hostDuelMode = "Single Duel") Or (My.Settings.hostStartingLP = "8000" And My.Settings.hostDuelMode = "Match Duel") Or (My.Settings.hostStartingLP = "16000" And My.Settings.hostDuelMode = "Tag Duel") Then
+            If duelModeCmBox.SelectedIndex = 0 Or duelModeCmBox.SelectedIndex = 1 Then
+                startingLP.Text = "8000"
+            Else
+                startingLP.Text = "16000"
+            End If
+        End If
     End Sub
 End Class

@@ -518,6 +518,7 @@ Partial Class GameList
         Me.GameListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.GameName, Me.Type, Me.MasterRules, Me.Banlist, Me.Mode, Me.Host, Me.Status})
         Me.GameListView.Cursor = System.Windows.Forms.Cursors.Default
         Me.GameListView.FullRowSelect = True
+        Me.GameListView.HideSelection = False
         Me.GameListView.Location = New System.Drawing.Point(20, 86)
         Me.GameListView.MultiSelect = False
         Me.GameListView.Name = "GameListView"
