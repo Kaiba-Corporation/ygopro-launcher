@@ -218,7 +218,12 @@ Public Class SinglePlayerDuelPage
     Private Sub DuelingRobot_Click(sender As Object, e As EventArgs) Handles DuelingRobot.Click
         Launcher.duelingRobot = New DuelingRobot
         Launcher.DuelPanel.Controls.Add(Launcher.duelingRobot)
-        Launcher.duelingRobot.masterRulesCmBox.SelectedIndex = 1
+        Launcher.duelingRobot.masterRulesCmBox.SelectedIndex = 2
+        Launcher.duelingRobot.duelModeCmBox.SelectedIndex = 0
+        Launcher.duelingRobot.lifePointsCmBox.SelectedIndex = 5
+        Launcher.duelingRobot.startingHandCmBox.SelectedIndex = 5
+        Launcher.duelingRobot.cardsPerDrawCmBox.SelectedIndex = 1
+        Launcher.duelingRobot.turnTimerCmBox.SelectedIndex = 4
         Me.Dispose()
     End Sub
 

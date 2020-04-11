@@ -1,4 +1,4 @@
-﻿Imports System
+Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
@@ -4403,6 +4403,13 @@ Public Class Launcher
                 objwriter.Close()
 
                 JarvisTimer.Start()
+
+                If (sParts.Length = 3) Then
+                    If (sParts(2) = 2) Then
+                        duelingRobot.portTxt.Text = sParts(1)
+                        MessageBox.Show("You duel port is: " & sParts(1) & Environment.NewLine & Environment.NewLine & "You can give this port to your friends and invite them to join the tag, or you can use it to add more bots.", "Duel Port")
+                    End If
+                End If
             End If
             If sParts(0) = "Avatar" Then
                 AvatarItem = 1

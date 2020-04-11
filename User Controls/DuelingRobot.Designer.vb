@@ -48,6 +48,27 @@ Partial Class DuelingRobot
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.masterRulesCmBox = New System.Windows.Forms.ComboBox()
+        Me.duelModeCmBox = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lifePointsCmBox = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cardsPerDrawCmBox = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.startingHandCmBox = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.turnTimerCmBox = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.joinBtn = New System.Windows.Forms.Button()
+        Me.addBotBtn = New System.Windows.Forms.Button()
+        Me.Panel61 = New System.Windows.Forms.Panel()
+        Me.Panel58 = New System.Windows.Forms.Panel()
+        Me.Panel59 = New System.Windows.Forms.Panel()
+        Me.Panel60 = New System.Windows.Forms.Panel()
+        Me.portTxt = New System.Windows.Forms.TextBox()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.dontShuffleChb = New System.Windows.Forms.CheckBox()
         Me.Buttons1 = New YGOPRO_The_Dawn_of_a_New_Era_Launcher.Buttons()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,7 +97,7 @@ Partial Class DuelingRobot
         Me.Duel.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
         Me.Duel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Duel.ForeColor = System.Drawing.Color.Cyan
-        Me.Duel.Location = New System.Drawing.Point(575, 332)
+        Me.Duel.Location = New System.Drawing.Point(576, 333)
         Me.Duel.Name = "Duel"
         Me.Duel.Size = New System.Drawing.Size(86, 22)
         Me.Duel.TabIndex = 335
@@ -179,7 +200,7 @@ Partial Class DuelingRobot
         Me.Panel10.BackColor = System.Drawing.Color.Cyan
         Me.Panel10.Location = New System.Drawing.Point(667, 78)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(1, 284)
+        Me.Panel10.Size = New System.Drawing.Size(1, 315)
         Me.Panel10.TabIndex = 371
         '
         'duelingRobotDeckListBox
@@ -311,6 +332,217 @@ Partial Class DuelingRobot
         Me.masterRulesCmBox.Size = New System.Drawing.Size(38, 21)
         Me.masterRulesCmBox.TabIndex = 383
         '
+        'duelModeCmBox
+        '
+        Me.duelModeCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.duelModeCmBox.FormattingEnabled = True
+        Me.duelModeCmBox.Items.AddRange(New Object() {"Single Duel", "Match Duel", "Tag Duel"})
+        Me.duelModeCmBox.Location = New System.Drawing.Point(565, 122)
+        Me.duelModeCmBox.Name = "duelModeCmBox"
+        Me.duelModeCmBox.Size = New System.Drawing.Size(96, 21)
+        Me.duelModeCmBox.TabIndex = 385
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.ForeColor = System.Drawing.Color.Cyan
+        Me.Label3.Location = New System.Drawing.Point(562, 106)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(62, 13)
+        Me.Label3.TabIndex = 384
+        Me.Label3.Text = "Duel Mode:"
+        '
+        'lifePointsCmBox
+        '
+        Me.lifePointsCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.lifePointsCmBox.FormattingEnabled = True
+        Me.lifePointsCmBox.Items.AddRange(New Object() {"1", "100", "1000", "2000", "4000", "8000", "16000", "32000", "64000", "100000", "1000000", "10000000"})
+        Me.lifePointsCmBox.Location = New System.Drawing.Point(565, 163)
+        Me.lifePointsCmBox.Name = "lifePointsCmBox"
+        Me.lifePointsCmBox.Size = New System.Drawing.Size(96, 21)
+        Me.lifePointsCmBox.TabIndex = 387
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.ForeColor = System.Drawing.Color.Cyan
+        Me.Label4.Location = New System.Drawing.Point(562, 147)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(59, 13)
+        Me.Label4.TabIndex = 386
+        Me.Label4.Text = "Life Points:"
+        '
+        'cardsPerDrawCmBox
+        '
+        Me.cardsPerDrawCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cardsPerDrawCmBox.FormattingEnabled = True
+        Me.cardsPerDrawCmBox.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        Me.cardsPerDrawCmBox.Location = New System.Drawing.Point(565, 245)
+        Me.cardsPerDrawCmBox.Name = "cardsPerDrawCmBox"
+        Me.cardsPerDrawCmBox.Size = New System.Drawing.Size(96, 21)
+        Me.cardsPerDrawCmBox.TabIndex = 395
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.ForeColor = System.Drawing.Color.Cyan
+        Me.Label7.Location = New System.Drawing.Point(562, 229)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(84, 13)
+        Me.Label7.TabIndex = 394
+        Me.Label7.Text = "Cards Per Draw:"
+        '
+        'startingHandCmBox
+        '
+        Me.startingHandCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.startingHandCmBox.FormattingEnabled = True
+        Me.startingHandCmBox.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        Me.startingHandCmBox.Location = New System.Drawing.Point(565, 204)
+        Me.startingHandCmBox.Name = "startingHandCmBox"
+        Me.startingHandCmBox.Size = New System.Drawing.Size(96, 21)
+        Me.startingHandCmBox.TabIndex = 393
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.ForeColor = System.Drawing.Color.Cyan
+        Me.Label8.Location = New System.Drawing.Point(562, 188)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(75, 13)
+        Me.Label8.TabIndex = 392
+        Me.Label8.Text = "Starting Hand:"
+        '
+        'turnTimerCmBox
+        '
+        Me.turnTimerCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.turnTimerCmBox.FormattingEnabled = True
+        Me.turnTimerCmBox.Items.AddRange(New Object() {"30 Seconds", "1 Minute", "2 Minutes", "3 Minutes", "4 Minutes", "5 Minutes", "10 Minutes", "30 Minutes", "1 Hour"})
+        Me.turnTimerCmBox.Location = New System.Drawing.Point(565, 286)
+        Me.turnTimerCmBox.Name = "turnTimerCmBox"
+        Me.turnTimerCmBox.Size = New System.Drawing.Size(96, 21)
+        Me.turnTimerCmBox.TabIndex = 397
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.ForeColor = System.Drawing.Color.Cyan
+        Me.Label11.Location = New System.Drawing.Point(562, 270)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(61, 13)
+        Me.Label11.TabIndex = 396
+        Me.Label11.Text = "Turn Timer:"
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.Cyan
+        Me.Panel4.Location = New System.Drawing.Point(410, 392)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(257, 1)
+        Me.Panel4.TabIndex = 398
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.ForeColor = System.Drawing.Color.Cyan
+        Me.Label5.Location = New System.Drawing.Point(413, 371)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(29, 13)
+        Me.Label5.TabIndex = 399
+        Me.Label5.Text = "Port:"
+        '
+        'joinBtn
+        '
+        Me.joinBtn.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
+        Me.joinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.joinBtn.ForeColor = System.Drawing.Color.Cyan
+        Me.joinBtn.Location = New System.Drawing.Point(512, 366)
+        Me.joinBtn.Name = "joinBtn"
+        Me.joinBtn.Size = New System.Drawing.Size(72, 22)
+        Me.joinBtn.TabIndex = 400
+        Me.joinBtn.Text = "Join"
+        Me.joinBtn.UseVisualStyleBackColor = True
+        '
+        'addBotBtn
+        '
+        Me.addBotBtn.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
+        Me.addBotBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.addBotBtn.ForeColor = System.Drawing.Color.Cyan
+        Me.addBotBtn.Location = New System.Drawing.Point(590, 366)
+        Me.addBotBtn.Name = "addBotBtn"
+        Me.addBotBtn.Size = New System.Drawing.Size(72, 22)
+        Me.addBotBtn.TabIndex = 401
+        Me.addBotBtn.Text = "Add Bot"
+        Me.addBotBtn.UseVisualStyleBackColor = True
+        '
+        'Panel61
+        '
+        Me.Panel61.BackColor = System.Drawing.Color.Cyan
+        Me.Panel61.Location = New System.Drawing.Point(505, 370)
+        Me.Panel61.Name = "Panel61"
+        Me.Panel61.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Panel61.Size = New System.Drawing.Size(1, 16)
+        Me.Panel61.TabIndex = 406
+        '
+        'Panel58
+        '
+        Me.Panel58.BackColor = System.Drawing.Color.Cyan
+        Me.Panel58.Location = New System.Drawing.Point(444, 369)
+        Me.Panel58.Name = "Panel58"
+        Me.Panel58.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Panel58.Size = New System.Drawing.Size(1, 16)
+        Me.Panel58.TabIndex = 405
+        '
+        'Panel59
+        '
+        Me.Panel59.BackColor = System.Drawing.Color.Cyan
+        Me.Panel59.Location = New System.Drawing.Point(444, 385)
+        Me.Panel59.Name = "Panel59"
+        Me.Panel59.Size = New System.Drawing.Size(62, 1)
+        Me.Panel59.TabIndex = 404
+        '
+        'Panel60
+        '
+        Me.Panel60.BackColor = System.Drawing.Color.Cyan
+        Me.Panel60.Location = New System.Drawing.Point(444, 369)
+        Me.Panel60.Name = "Panel60"
+        Me.Panel60.Size = New System.Drawing.Size(62, 1)
+        Me.Panel60.TabIndex = 403
+        '
+        'portTxt
+        '
+        Me.portTxt.BackColor = System.Drawing.Color.Black
+        Me.portTxt.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.portTxt.ForeColor = System.Drawing.Color.Cyan
+        Me.portTxt.Location = New System.Drawing.Point(447, 371)
+        Me.portTxt.Name = "portTxt"
+        Me.portTxt.Size = New System.Drawing.Size(57, 13)
+        Me.portTxt.TabIndex = 402
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.Cyan
+        Me.Panel5.Location = New System.Drawing.Point(409, 362)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1, 31)
+        Me.Panel5.TabIndex = 407
+        '
+        'dontShuffleChb
+        '
+        Me.dontShuffleChb.AutoSize = True
+        Me.dontShuffleChb.ForeColor = System.Drawing.Color.Cyan
+        Me.dontShuffleChb.Location = New System.Drawing.Point(565, 311)
+        Me.dontShuffleChb.Name = "dontShuffleChb"
+        Me.dontShuffleChb.Size = New System.Drawing.Size(87, 17)
+        Me.dontShuffleChb.TabIndex = 408
+        Me.dontShuffleChb.Text = "Don't Shuffle"
+        Me.dontShuffleChb.UseVisualStyleBackColor = True
+        '
         'Buttons1
         '
         Me.Buttons1.BackColor = System.Drawing.Color.Black
@@ -325,6 +557,27 @@ Partial Class DuelingRobot
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
+        Me.Controls.Add(Me.dontShuffleChb)
+        Me.Controls.Add(Me.Panel5)
+        Me.Controls.Add(Me.Panel61)
+        Me.Controls.Add(Me.Panel58)
+        Me.Controls.Add(Me.Panel59)
+        Me.Controls.Add(Me.Panel60)
+        Me.Controls.Add(Me.portTxt)
+        Me.Controls.Add(Me.addBotBtn)
+        Me.Controls.Add(Me.joinBtn)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.turnTimerCmBox)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.cardsPerDrawCmBox)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.startingHandCmBox)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.lifePointsCmBox)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.duelModeCmBox)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.masterRulesCmBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel3)
@@ -392,4 +645,25 @@ Partial Class DuelingRobot
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents masterRulesCmBox As ComboBox
+    Friend WithEvents duelModeCmBox As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lifePointsCmBox As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents cardsPerDrawCmBox As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents startingHandCmBox As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents turnTimerCmBox As ComboBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label5 As Label
+    Friend WithEvents joinBtn As Button
+    Friend WithEvents addBotBtn As Button
+    Friend WithEvents Panel61 As Panel
+    Friend WithEvents Panel58 As Panel
+    Friend WithEvents Panel59 As Panel
+    Friend WithEvents Panel60 As Panel
+    Friend WithEvents portTxt As TextBox
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents dontShuffleChb As CheckBox
 End Class
