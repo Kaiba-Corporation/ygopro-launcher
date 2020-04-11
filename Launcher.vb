@@ -1,4 +1,4 @@
-Imports System
+﻿Imports System
 Imports System.IO
 Imports System.Net
 Imports System.Net.Sockets
@@ -190,8 +190,8 @@ Public Class Launcher
 
     Dim sessionStatus As String
 
-    Dim Version As String = "5.18.1.4915"
-    Dim Version_2 As String = "1.9.1.1542"
+    Dim Version As String = "5.19.0.4942"
+    Dim Version_2 As String = "1.10.0.1569"
 
     Public chatPort As Integer = 2080
     Public gamePort As Integer = 7000
