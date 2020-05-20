@@ -190,8 +190,8 @@ Public Class Launcher
 
     Dim sessionStatus As String
 
-    Dim Version As String = "5.19.0.4942"
-    Dim Version_2 As String = "1.10.0.1569"
+    Dim Version As String = "5.20.0.4969"
+    Dim Version_2 As String = "1.11.0.1596"
 
     Public chatPort As Integer = 2080
     Public gamePort As Integer = 7000

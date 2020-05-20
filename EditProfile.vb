@@ -1235,7 +1235,7 @@
             border = 133
         ElseIf ListBox1.SelectedItem = "SupremeKingOfGames Border" Then
             border = 134
-        ElseIf ListBox1.SelectedItem = "Divine Halo Border" Then
+        ElseIf ListBox1.SelectedItem = "Divine Halo Border I" Then
             border = 135
         ElseIf ListBox1.SelectedItem = "n00b_of_legend Border" Then
             border = 136
@@ -1289,12 +1289,20 @@
             border = 160
         ElseIf ListBox1.SelectedItem = "Pumpkinstraw09 Border" Then
             border = 161
-		ElseIf ListBox1.SelectedItem = "Magician7 Border" Then
+        ElseIf ListBox1.SelectedItem = "Magician7 Border" Then
             border = 162
         ElseIf ListBox1.SelectedItem = "zapzap979 Border" Then
             border = 163
         ElseIf ListBox1.SelectedItem = "ThePROtagonist Border" Then
             border = 164
+        ElseIf ListBox1.SelectedItem = "Divine Halo Border II" Then
+            border = 165
+        ElseIf ListBox1.SelectedItem = "Amine Border I" Then
+            border = 166
+        ElseIf ListBox1.SelectedItem = "Amine Border II" Then
+            border = 167
+        ElseIf ListBox1.SelectedItem = "Amine Border III" Then
+            border = 168
         End If
 
         If borderList.Contains(border) Then
@@ -1571,7 +1579,7 @@
             border = 133
         ElseIf ListBox1.SelectedItem = "SupremeKingOfGames Border" Then
             border = 134
-        ElseIf ListBox1.SelectedItem = "Divine Halo Border" Then
+        ElseIf ListBox1.SelectedItem = "Divine Halo Border I" Then
             border = 135
         ElseIf ListBox1.SelectedItem = "n00b_of_legend Border" Then
             border = 136
@@ -1625,12 +1633,20 @@
             border = 160
         ElseIf ListBox1.SelectedItem = "Pumpkinstraw09 Border" Then
             border = 161
-		ElseIf ListBox1.SelectedItem = "Magician7 Border" Then
+        ElseIf ListBox1.SelectedItem = "Magician7 Border" Then
             border = 162
         ElseIf ListBox1.SelectedItem = "zapzap979 Border" Then
             border = 163
         ElseIf ListBox1.SelectedItem = "ThePROtagonist Border" Then
             border = 164
+        ElseIf ListBox1.SelectedItem = "Divine Halo Border II" Then
+            border = 165
+        ElseIf ListBox1.SelectedItem = "Amine Border I" Then
+            border = 166
+        ElseIf ListBox1.SelectedItem = "Amine Border II" Then
+            border = 167
+        ElseIf ListBox1.SelectedItem = "Amine Border III" Then
+            border = 168
         End If
 
         Try
@@ -1973,7 +1989,8 @@
             ListBox1.Items.Add("SupremeKingOfGames Border")
         End If
         If Launcher.Username = "Divine Halo" Then
-            ListBox1.Items.Add("Divine Halo Border")
+            ListBox1.Items.Add("Divine Halo Border I")
+            ListBox1.Items.Add("Divine Halo Border II")
         End If
         If Launcher.Username = "n00b_of_legend" Then
             ListBox1.Items.Add("n00b_of_legend Border")
@@ -2055,8 +2072,13 @@
 		If Launcher.Username = "zapzap979" Then
             ListBox1.Items.Add("zapzap979 Border")
         End If
-		If Launcher.Username = "ThePROtagonist" Then
+        If Launcher.Username = "ThePROtagonist" Then
             ListBox1.Items.Add("ThePROtagonist Border")
+        End If
+        If Launcher.Username = "Amine" Then
+            ListBox1.Items.Add("Amine Border I")
+            ListBox1.Items.Add("Amine Border II")
+            ListBox1.Items.Add("Amine Border III")
         End If
     End Sub
 
