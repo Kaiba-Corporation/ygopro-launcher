@@ -237,7 +237,7 @@ Partial Class HostForm
         '
         Me.masterRulesCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.masterRulesCmBox.FormattingEnabled = True
-        Me.masterRulesCmBox.Items.AddRange(New Object() {"Rule 1 (Original)", "Rule 2 (Synchro / XYZ)", "Rule 3 (Pendulum)", "Rule 4 (Links)", "Rule 5 (April 2020)"})
+        Me.masterRulesCmBox.Items.AddRange(New Object() {"Rule 1 (Original)", "Rule 2 (Synchro / XYZ)", "Rule 3 (Pendulum)", "Rule 4 (Links)", "Rule 5 (April 2020)", "Rush (April 2020)"})
         Me.masterRulesCmBox.Location = New System.Drawing.Point(95, 90)
         Me.masterRulesCmBox.Name = "masterRulesCmBox"
         Me.masterRulesCmBox.Size = New System.Drawing.Size(147, 21)

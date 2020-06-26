@@ -88,6 +88,11 @@
             gameType = "Tournament"
         ElseIf name.Substring(0, 1) = "4" Then
             gameType = "Battle City"
+        ElseIf name.Substring(0, 1) = "5" Then
+            masterRules = "R"
+            gameType = "Rush"
+            banlist = "RUSH"
+            mode = "RUSH"
         End If
 
         If name.Length > 7 Then

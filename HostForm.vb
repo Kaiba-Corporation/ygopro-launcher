@@ -62,7 +62,7 @@ Public Class HostForm
                     Else
                         b = 4
                     End If
-                Else
+                ElseIf allowedCardsCmBox.Text = "OCG" Then
                     If banlistCmBox.Text = "TCG" Then
                         b = 8
                     ElseIf banlistCmBox.Text = "OCG" Then
@@ -74,6 +74,8 @@ Public Class HostForm
                     Else
                         b = 8
                     End If
+                Else
+                    b = 0
                 End If
 
 
@@ -100,8 +102,12 @@ Public Class HostForm
                     h = 3
                 ElseIf masterRulesCmBox.Text = "Rule 4 (Links)" Then
                     h = 4
-                Else
+                ElseIf masterRulesCmBox.Text = "Rule 5 (April 2020)" Then
                     h = 5
+                Else
+                    a = 5
+                    h = 2
+                    b = 3
                 End If
 
                 Try
@@ -348,6 +354,37 @@ Public Class HostForm
             Else
                 startingLP.Text = "16000"
             End If
+        End If
+    End Sub
+
+    Private Sub masterRulesCmBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles masterRulesCmBox.SelectedIndexChanged
+        If (masterRulesCmBox.SelectedIndex = 5) Then
+            banlistCmBox.Enabled = False
+            allowedCardsCmBox.Enabled = False
+
+            banlistCmBox.Items.Clear()
+            banlistCmBox.Items.Add("RUSH")
+            banlistCmBox.SelectedIndex = 0
+            allowedCardsCmBox.Items.Clear()
+            allowedCardsCmBox.Items.Add("RUSH")
+            allowedCardsCmBox.SelectedIndex = 0
+            startingHand.Text = 4
+        Else
+            banlistCmBox.Enabled = True
+            allowedCardsCmBox.Enabled = True
+
+            banlistCmBox.Items.Clear()
+            banlistCmBox.Items.Add("TCG")
+            banlistCmBox.Items.Add("OCG")
+            banlistCmBox.Items.Add("Traditional")
+            banlistCmBox.Items.Add("No Banlist")
+            banlistCmBox.SelectedIndex = 0
+            allowedCardsCmBox.Items.Clear()
+            allowedCardsCmBox.Items.Add("TCG/OCG")
+            allowedCardsCmBox.Items.Add("TCG")
+            allowedCardsCmBox.Items.Add("OCG")
+            allowedCardsCmBox.SelectedIndex = 0
+            startingHand.Text = 5
         End If
     End Sub
 End Class

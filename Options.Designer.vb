@@ -94,6 +94,8 @@ Partial Class Options
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.turnTimerCmBox = New System.Windows.Forms.ComboBox()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.masterRulesCmBox = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -190,8 +192,6 @@ Partial Class Options
         Me.rbnNextTurn = New System.Windows.Forms.RadioButton()
         Me.rbnFlip = New System.Windows.Forms.RadioButton()
         Me.rbnGainLP = New System.Windows.Forms.RadioButton()
-        Me.turnTimerCmBox = New System.Windows.Forms.ComboBox()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1039,6 +1039,27 @@ Partial Class Options
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Default Host Settings"
         '
+        'turnTimerCmBox
+        '
+        Me.turnTimerCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.turnTimerCmBox.FormattingEnabled = True
+        Me.turnTimerCmBox.Items.AddRange(New Object() {"3 Minutes", "7 Minutes"})
+        Me.turnTimerCmBox.Location = New System.Drawing.Point(107, 135)
+        Me.turnTimerCmBox.Name = "turnTimerCmBox"
+        Me.turnTimerCmBox.Size = New System.Drawing.Size(143, 21)
+        Me.turnTimerCmBox.TabIndex = 70
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.ForeColor = System.Drawing.Color.White
+        Me.Label19.Location = New System.Drawing.Point(17, 138)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(61, 13)
+        Me.Label19.TabIndex = 69
+        Me.Label19.Text = "Turn Timer:"
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Silver
@@ -1055,7 +1076,7 @@ Partial Class Options
         '
         Me.masterRulesCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.masterRulesCmBox.FormattingEnabled = True
-        Me.masterRulesCmBox.Items.AddRange(New Object() {"Rule 1 (Original)", "Rule 2 (Synchro / XYZ)", "Rule 3 (Pendulum)", "Rule 4 (Links)", "Rule 5 (April 2020)"})
+        Me.masterRulesCmBox.Items.AddRange(New Object() {"Rule 1 (Original)", "Rule 2 (Synchro / XYZ)", "Rule 3 (Pendulum)", "Rule 4 (Links)", "Rule 5 (April 2020)", "Rush (April 2020)"})
         Me.masterRulesCmBox.Location = New System.Drawing.Point(107, 108)
         Me.masterRulesCmBox.Name = "masterRulesCmBox"
         Me.masterRulesCmBox.Size = New System.Drawing.Size(143, 21)
@@ -2133,27 +2154,6 @@ Partial Class Options
         Me.rbnGainLP.TabIndex = 13
         Me.rbnGainLP.Text = "Gain LP"
         Me.rbnGainLP.UseVisualStyleBackColor = True
-        '
-        'turnTimerCmBox
-        '
-        Me.turnTimerCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.turnTimerCmBox.FormattingEnabled = True
-        Me.turnTimerCmBox.Items.AddRange(New Object() {"3 Minutes", "7 Minutes"})
-        Me.turnTimerCmBox.Location = New System.Drawing.Point(107, 135)
-        Me.turnTimerCmBox.Name = "turnTimerCmBox"
-        Me.turnTimerCmBox.Size = New System.Drawing.Size(143, 21)
-        Me.turnTimerCmBox.TabIndex = 70
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.ForeColor = System.Drawing.Color.White
-        Me.Label19.Location = New System.Drawing.Point(17, 138)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(61, 13)
-        Me.Label19.TabIndex = 69
-        Me.Label19.Text = "Turn Timer:"
         '
         'Options
         '

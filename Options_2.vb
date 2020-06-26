@@ -351,7 +351,7 @@ Public Class Options_2
         banlistCmBox.Text = "TCG"
         allowedCardsCmBox.Text = "TCG/OCG"
         duelModeCmBox.Text = "Single Duel"
-        masterRulesCmBox.Text = "Rule 4 (Links)"
+        masterRulesCmBox.Text = "Rule 5 (April 2020)"
         turnTimerCmBox.SelectedIndex = 0
         dontShuffleDeckChb.Checked = False
         dontCheckDeckChb.Checked = False
@@ -393,5 +393,36 @@ Public Class Options_2
     Private Sub PictureBox21_Click(sender As Object, e As EventArgs) Handles PictureBox21.Click
         ColorDialog1.ShowDialog()
         PictureBox21.BackColor = ColorDialog1.Color
+    End Sub
+
+    Private Sub masterRulesCmBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles masterRulesCmBox.SelectedIndexChanged
+        If (masterRulesCmBox.SelectedIndex = 5) Then
+            banlistCmBox.Enabled = False
+            allowedCardsCmBox.Enabled = False
+
+            banlistCmBox.Items.Clear()
+            banlistCmBox.Items.Add("RUSH")
+            banlistCmBox.SelectedIndex = 0
+            allowedCardsCmBox.Items.Clear()
+            allowedCardsCmBox.Items.Add("RUSH")
+            allowedCardsCmBox.SelectedIndex = 0
+            startingHand.Text = 4
+        Else
+            banlistCmBox.Enabled = True
+            allowedCardsCmBox.Enabled = True
+
+            banlistCmBox.Items.Clear()
+            banlistCmBox.Items.Add("TCG")
+            banlistCmBox.Items.Add("OCG")
+            banlistCmBox.Items.Add("Traditional")
+            banlistCmBox.Items.Add("No Banlist")
+            banlistCmBox.SelectedIndex = 0
+            allowedCardsCmBox.Items.Clear()
+            allowedCardsCmBox.Items.Add("TCG/OCG")
+            allowedCardsCmBox.Items.Add("TCG")
+            allowedCardsCmBox.Items.Add("OCG")
+            allowedCardsCmBox.SelectedIndex = 0
+            startingHand.Text = 5
+        End If
     End Sub
 End Class

@@ -24,6 +24,8 @@ Partial Class Options_2
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Options_2))
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.turnTimerCmBox = New System.Windows.Forms.ComboBox()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.masterRulesCmBox = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -99,8 +101,6 @@ Partial Class Options_2
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.editGameSettingsBtn = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-        Me.turnTimerCmBox = New System.Windows.Forms.ComboBox()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -157,6 +157,27 @@ Partial Class Options_2
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Default Host Settings"
         '
+        'turnTimerCmBox
+        '
+        Me.turnTimerCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.turnTimerCmBox.FormattingEnabled = True
+        Me.turnTimerCmBox.Items.AddRange(New Object() {"3 Minutes", "7 Minutes"})
+        Me.turnTimerCmBox.Location = New System.Drawing.Point(107, 135)
+        Me.turnTimerCmBox.Name = "turnTimerCmBox"
+        Me.turnTimerCmBox.Size = New System.Drawing.Size(143, 21)
+        Me.turnTimerCmBox.TabIndex = 72
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
+        Me.Label19.ForeColor = System.Drawing.Color.White
+        Me.Label19.Location = New System.Drawing.Point(17, 138)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(61, 13)
+        Me.Label19.TabIndex = 71
+        Me.Label19.Text = "Turn Timer:"
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Silver
@@ -173,7 +194,7 @@ Partial Class Options_2
         '
         Me.masterRulesCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.masterRulesCmBox.FormattingEnabled = True
-        Me.masterRulesCmBox.Items.AddRange(New Object() {"Rule 1 (Original)", "Rule 2 (Synchro / XYZ)", "Rule 3 (Pendulum)", "Rule 4 (Links)", "Rule 5 (April 2020)"})
+        Me.masterRulesCmBox.Items.AddRange(New Object() {"Rule 1 (Original)", "Rule 2 (Synchro / XYZ)", "Rule 3 (Pendulum)", "Rule 4 (Links)", "Rule 5 (April 2020)", "Rush (April 2020)"})
         Me.masterRulesCmBox.Location = New System.Drawing.Point(107, 108)
         Me.masterRulesCmBox.Name = "masterRulesCmBox"
         Me.masterRulesCmBox.Size = New System.Drawing.Size(143, 21)
@@ -958,27 +979,6 @@ Partial Class Options_2
         Me.editGameSettingsBtn.TabIndex = 36
         Me.editGameSettingsBtn.Text = "Edit Game Settings"
         Me.editGameSettingsBtn.UseVisualStyleBackColor = False
-        '
-        'turnTimerCmBox
-        '
-        Me.turnTimerCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.turnTimerCmBox.FormattingEnabled = True
-        Me.turnTimerCmBox.Items.AddRange(New Object() {"3 Minutes", "7 Minutes"})
-        Me.turnTimerCmBox.Location = New System.Drawing.Point(107, 135)
-        Me.turnTimerCmBox.Name = "turnTimerCmBox"
-        Me.turnTimerCmBox.Size = New System.Drawing.Size(143, 21)
-        Me.turnTimerCmBox.TabIndex = 72
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.ForeColor = System.Drawing.Color.White
-        Me.Label19.Location = New System.Drawing.Point(17, 138)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(61, 13)
-        Me.Label19.TabIndex = 71
-        Me.Label19.Text = "Turn Timer:"
         '
         'Options_2
         '

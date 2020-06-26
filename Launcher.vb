@@ -190,8 +190,8 @@ Public Class Launcher
 
     Dim sessionStatus As String
 
-    Dim Version As String = "5.20.0.4969"
-    Dim Version_2 As String = "1.11.0.1596"
+    Dim Version As String = "5.22.0.4996"
+    Dim Version_2 As String = "1.12.0.1623"
 
     Public chatPort As Integer = 2080
     Public gamePort As Integer = 7000
@@ -270,20 +270,10 @@ Public Class Launcher
         ListBox1.BackColor = My.Settings.Userlist
         ListBox2.BackColor = My.Settings.Userlist
         ListBox4.BackColor = My.Settings.Userlist
-
-        If My.Settings.SelectedServer = -1 Then
-            Dim rand As New Random
-            My.Settings.SelectedServer = rand.Next(0, 2)
-            My.Settings.Save()
-        End If
-        selectServerCmBox.SelectedIndex = My.Settings.SelectedServer
     End Sub
 
     Private Sub LoginBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoginBtn.Click
         Try
-            My.Settings.SelectedServer = selectServerCmBox.SelectedIndex
-            My.Settings.Save()
-
             Label12.Text = "Connecting..."
             If My.Settings.SavedCheck = 1 Then
                 My.Settings.SavedUsername = TextBox1.Text
@@ -320,14 +310,14 @@ Public Class Launcher
             Dim HTML As String
             Dim sParts() As String
             Try
-                Url = ygoproUrl1 & "?server=" & My.Settings.SelectedServer
+                Url = ygoproUrl1
                 HTML = Client.DownloadString(New Uri(Url))
             Catch
                 Try
-                    Url = ygoproUrl2 & "?server=" & My.Settings.SelectedServer
+                    Url = ygoproUrl2
                     HTML = Client.DownloadString(New Uri(Url))
                 Catch
-                    Url = ygoproUrl3 & "?server=" & My.Settings.SelectedServer
+                    Url = ygoproUrl3
                     HTML = Client.DownloadString(New Uri(Url))
                 End Try
             End Try
@@ -374,14 +364,14 @@ Public Class Launcher
             Dim HTML As String
             Dim sParts() As String
             Try
-                Url = ygoproUrl1 & "?server=" & My.Settings.SelectedServer
+                Url = ygoproUrl1
                 HTML = Client.DownloadString(New Uri(Url))
             Catch
                 Try
-                    Url = ygoproUrl2 & "?server=" & My.Settings.SelectedServer
+                    Url = ygoproUrl2
                     HTML = Client.DownloadString(New Uri(Url))
                 Catch
-                    Url = ygoproUrl3 & "?server=" & My.Settings.SelectedServer
+                    Url = ygoproUrl3
                     HTML = Client.DownloadString(New Uri(Url))
                 End Try
             End Try
@@ -485,8 +475,6 @@ Public Class Launcher
 
 #Region "Buttons"
     Private Sub RegisterBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RegisterBtn.Click
-        My.Settings.SelectedServer = selectServerCmBox.SelectedIndex
-        My.Settings.Save()
         Register.Show()
     End Sub
 
@@ -6740,14 +6728,14 @@ Public Class Launcher
             Dim HTML As String
             Dim sParts() As String
             Try
-                Url = ygoproUrl1 & "?server=" & My.Settings.SelectedServer
+                Url = ygoproUrl1
                 HTML = Client.DownloadString(New Uri(Url))
             Catch
                 Try
-                    Url = ygoproUrl2 & "?server=" & My.Settings.SelectedServer
+                    Url = ygoproUrl2
                     HTML = Client.DownloadString(New Uri(Url))
                 Catch
-                    Url = ygoproUrl3 & "?server=" & My.Settings.SelectedServer
+                    Url = ygoproUrl3
                     HTML = Client.DownloadString(New Uri(Url))
                 End Try
             End Try
@@ -6837,8 +6825,6 @@ Public Class Launcher
     End Sub
 
     Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
-        My.Settings.SelectedServer = selectServerCmBox.SelectedIndex
-        My.Settings.Save()
         ForgotPassword.Show()
     End Sub
 #End Region

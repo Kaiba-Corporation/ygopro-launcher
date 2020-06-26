@@ -1303,6 +1303,8 @@
             border = 167
         ElseIf ListBox1.SelectedItem = "Amine Border III" Then
             border = 168
+        ElseIf ListBox1.SelectedItem = "WindMillCrow Border" Then
+            border = 169
         End If
 
         If borderList.Contains(border) Then
@@ -1647,6 +1649,8 @@
             border = 167
         ElseIf ListBox1.SelectedItem = "Amine Border III" Then
             border = 168
+        ElseIf ListBox1.SelectedItem = "WindMillCrow Border" Then
+            border = 169
         End If
 
         Try
@@ -2079,6 +2083,9 @@
             ListBox1.Items.Add("Amine Border I")
             ListBox1.Items.Add("Amine Border II")
             ListBox1.Items.Add("Amine Border III")
+        End If
+        If Launcher.Username = "WindMillCrow" Then
+            ListBox1.Items.Add("WindMillCrow Border")
         End If
     End Sub
 
