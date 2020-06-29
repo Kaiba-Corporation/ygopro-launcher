@@ -288,10 +288,10 @@ Public Class HostForm
             startingHand.Enabled = False
             cardsPerDraw.Enabled = False
         Else
+            masterRulesCmBox.Text = My.Settings.hostMasterRules
             banlistCmBox.Text = My.Settings.hostBanlist
             allowedCardsCmBox.Text = My.Settings.hostAllowedCards
             duelModeCmBox.Text = My.Settings.hostDuelMode
-            masterRulesCmBox.Text = My.Settings.hostMasterRules
 
             If My.Settings.hostDontRecoverTime Then
                 turnTimerCmBox.SelectedIndex = 1

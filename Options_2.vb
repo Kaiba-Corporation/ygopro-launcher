@@ -75,10 +75,10 @@ Public Class Options_2
             showAdvertisements.Checked = False
         End If
 
+        masterRulesCmBox.Text = My.Settings.hostMasterRules
         banlistCmBox.Text = My.Settings.hostBanlist
         allowedCardsCmBox.Text = My.Settings.hostAllowedCards
         duelModeCmBox.Text = My.Settings.hostDuelMode
-        masterRulesCmBox.Text = My.Settings.hostMasterRules
 
         If My.Settings.hostDontRecoverTime Then
             turnTimerCmBox.SelectedIndex = 1

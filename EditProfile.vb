@@ -1291,7 +1291,7 @@
             border = 161
         ElseIf ListBox1.SelectedItem = "Magician7 Border" Then
             border = 162
-        ElseIf ListBox1.SelectedItem = "zapzap979 Border" Then
+        ElseIf ListBox1.SelectedItem = "Zappy Border" Then
             border = 163
         ElseIf ListBox1.SelectedItem = "ThePROtagonist Border" Then
             border = 164
@@ -1637,7 +1637,7 @@
             border = 161
         ElseIf ListBox1.SelectedItem = "Magician7 Border" Then
             border = 162
-        ElseIf ListBox1.SelectedItem = "zapzap979 Border" Then
+        ElseIf ListBox1.SelectedItem = "Zappy Border" Then
             border = 163
         ElseIf ListBox1.SelectedItem = "ThePROtagonist Border" Then
             border = 164
@@ -2073,8 +2073,8 @@
 		If Launcher.Username = "Magician7" Then
             ListBox1.Items.Add("Magician7 Border")
         End If
-		If Launcher.Username = "zapzap979" Then
-            ListBox1.Items.Add("zapzap979 Border")
+        If Launcher.Username = "Zappy" Then
+            ListBox1.Items.Add("Zappy Border")
         End If
         If Launcher.Username = "ThePROtagonist" Then
             ListBox1.Items.Add("ThePROtagonist Border")
