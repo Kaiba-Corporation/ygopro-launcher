@@ -1,10 +1,10 @@
 ﻿Public Class PvPDuelPage
 
-    Private Sub Unranked_MouseMove(sender As Object, e As MouseEventArgs) Handles Unranked.MouseMove
+    Private Sub Unranked_MouseMove(sender As Object, e As EventArgs) Handles Unranked.MouseEnter
         Unranked.Image = My.Resources.UnrankedR
         Unranked.Tag = "R"
 
-       If Ranked.Tag = "R" Then
+        If Ranked.Tag = "R" Then
             Ranked.Image = My.Resources.RankedB
             Ranked.Tag = ""
         End If
@@ -20,7 +20,7 @@
         Buttons1.ResetButtons()
     End Sub
 
-    Private Sub Ranked_MouseMove(sender As Object, e As MouseEventArgs) Handles Ranked.MouseMove
+    Private Sub Ranked_MouseMove(sender As Object, e As EventArgs) Handles Ranked.MouseEnter
         Ranked.Image = My.Resources.RankedR
         Ranked.Tag = "R"
 
@@ -40,7 +40,7 @@
         Buttons1.ResetButtons()
     End Sub
 
-    Private Sub Tournaments_MouseMove(sender As Object, e As MouseEventArgs) Handles Tournaments.MouseMove
+    Private Sub Tournaments_MouseMove(sender As Object, e As EventArgs) Handles Tournaments.MouseEnter
         Tournaments.Image = My.Resources.TournamentR
         Tournaments.Tag = "R"
 
@@ -60,7 +60,7 @@
         Buttons1.ResetButtons()
     End Sub
 
-    Private Sub PvPDuelPage_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove, PictureBox1.MouseMove
+    Private Sub PvPDuelPage_MouseMove(sender As Object, e As EventArgs) Handles Me.MouseMove, PictureBox1.MouseEnter
         If Unranked.Tag = "R" Then
             Unranked.Image = My.Resources.UnrankedB
             Unranked.Tag = ""
@@ -81,7 +81,7 @@
         Buttons1.ResetButtons()
     End Sub
 
-    Private Sub Buttons1_MouseMove(sender As Object, e As MouseEventArgs) Handles Buttons1.MouseMove
+    Private Sub Buttons1_MouseMove(sender As Object, e As EventArgs) Handles Buttons1.MouseEnter
         If Unranked.Tag = "R" Then
             Unranked.Image = My.Resources.UnrankedB
             Unranked.Tag = ""
@@ -100,7 +100,7 @@
         End If
     End Sub
 
-    Private Sub BackButton_MouseMove(sender As Object, e As MouseEventArgs) Handles BackButton.MouseMove
+    Private Sub BackButton_MouseMove(sender As Object, e As EventArgs) Handles BackButton.MouseEnter
         BackButton.Image = My.Resources.BackR
         BackButton.Tag = "R"
 

@@ -131,6 +131,7 @@ Partial Class SinglePlayerDuelPage
         Me.Controls.Add(Me.Buttons1)
         Me.Controls.Add(Me.DuelingRobot)
         Me.Controls.Add(Me.PictureBox1)
+        Me.DoubleBuffered = True
         Me.Name = "SinglePlayerDuelPage"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Size = New System.Drawing.Size(927, 467)

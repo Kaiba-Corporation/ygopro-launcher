@@ -198,7 +198,7 @@ Public Class Launcher
 
     Public beta As Boolean = False
 
-    Public launcherEdition As Integer = 1
+    Public launcherEdition As Integer = 2
     Public ygoproExe As String = "YGOPRO.exe "
     Public ygoproUrl1 As String = "http://ygopro.org/TDOANE.php"
     Public ygoproUrl2 As String = "http://tdoane.com/TDOANE.php"

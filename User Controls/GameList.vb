@@ -36,7 +36,7 @@ Public Class GameList
 
     Public Sub AddGame(game As Game)
         If game.gameType <> gameListType Then
-            If Not (game.gameType = "Battle City" And gameListType = "Unranked") Then
+            If Not (game.gameType = "Battle City" And gameListType = "Unranked") And Not (game.gameType = "Rush" And gameListType = "Unranked") Then
                 Return
             End If
         End If
@@ -88,6 +88,8 @@ Public Class GameList
         Dim gameColor As New Color
         If game.status = "Dueling" Then
             gameColor = Color.FromArgb(228, 228, 228)
+        ElseIf game.gameType = "Rush" Then
+            gameColor = Color.FromArgb(238, 191, 238)
         ElseIf game.banlist = "No Banlist" Or (game.additionalRules <> "Additional Rules: None" And game.additionalRules <> "Rules: 7 Minute Timer") Then
             gameColor = Color.FromArgb(255, 210, 210)
         ElseIf game.type = "Single" Then

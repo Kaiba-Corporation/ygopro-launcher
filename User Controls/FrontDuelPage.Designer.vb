@@ -128,6 +128,7 @@ Partial Class FrontDuelPage
         Me.Controls.Add(Me.SinglePlayer)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PvP)
+        Me.DoubleBuffered = True
         Me.Name = "FrontDuelPage"
         Me.Size = New System.Drawing.Size(927, 467)
         CType(Me.PvP, System.ComponentModel.ISupportInitialize).EndInit()

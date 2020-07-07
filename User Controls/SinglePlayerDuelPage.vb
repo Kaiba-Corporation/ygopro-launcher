@@ -2,7 +2,7 @@
 
 Public Class SinglePlayerDuelPage
 
-    Private Sub DuelingRobot_MouseMove(sender As Object, e As MouseEventArgs) Handles DuelingRobot.MouseMove
+    Private Sub DuelingRobot_MouseMove(sender As Object, e As EventArgs) Handles DuelingRobot.MouseEnter
         DuelingRobot.Image = My.Resources.DuelingRobotR
         DuelingRobot.Tag = "R"
 
@@ -22,7 +22,7 @@ Public Class SinglePlayerDuelPage
         Buttons1.ResetButtons()
     End Sub
 
-    Private Sub SkillTests_MouseMove(sender As Object, e As MouseEventArgs) Handles SkillTests.MouseMove
+    Private Sub SkillTests_MouseMove(sender As Object, e As EventArgs) Handles SkillTests.MouseEnter
         SkillTests.Image = My.Resources.SkillTestsR
         SkillTests.Tag = "R"
 
@@ -42,7 +42,7 @@ Public Class SinglePlayerDuelPage
         Buttons1.ResetButtons()
     End Sub
 
-    Private Sub Puzzles_MouseMove(sender As Object, e As MouseEventArgs) Handles Puzzles.MouseMove
+    Private Sub Puzzles_MouseMove(sender As Object, e As EventArgs) Handles Puzzles.MouseEnter
         Puzzles.Image = My.Resources.PuzzlesR
         Puzzles.Tag = "R"
 
@@ -62,7 +62,7 @@ Public Class SinglePlayerDuelPage
         Buttons1.ResetButtons()
     End Sub
 
-    Private Sub SinglePlayerDuelPage_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove, PictureBox1.MouseMove
+    Private Sub SinglePlayerDuelPage_MouseMove(sender As Object, e As EventArgs) Handles Me.MouseMove, PictureBox1.MouseEnter
         If DuelingRobot.Tag = "R" Then
             DuelingRobot.Image = My.Resources.DuelingRobotB
             DuelingRobot.Tag = ""
@@ -80,7 +80,7 @@ Public Class SinglePlayerDuelPage
 
         Buttons1.ResetButtons()
     End Sub
-    Private Sub Buttons1_MouseMove(sender As Object, e As MouseEventArgs) Handles Buttons1.MouseMove
+    Private Sub Buttons1_MouseMove(sender As Object, e As EventArgs) Handles Buttons1.MouseEnter
         If DuelingRobot.Tag = "R" Then
             DuelingRobot.Image = My.Resources.DuelingRobotB
             DuelingRobot.Tag = ""
@@ -99,7 +99,7 @@ Public Class SinglePlayerDuelPage
         End If
     End Sub
 
-    Private Sub BackButton_MouseMove(sender As Object, e As MouseEventArgs) Handles BackButton.MouseMove
+    Private Sub BackButton_MouseMove(sender As Object, e As EventArgs) Handles BackButton.MouseEnter
         BackButton.Image = My.Resources.BackR
         BackButton.Tag = "R"
 
@@ -125,6 +125,11 @@ Public Class SinglePlayerDuelPage
     End Sub
 
     Private Sub Puzzles_Click(sender As Object, e As EventArgs) Handles Puzzles.Click
+        If Launcher.launcherEdition = 2 Then
+            MsgBox("Puzzles are not available in YGOPRO 2!")
+            Return
+        End If
+
         Dim objwriter As New System.IO.StreamWriter(Launcher.Current & "\YGOPRO\" & "system.CONF")
         objwriter.Write("#config file")
         objwriter.Write(Environment.NewLine)

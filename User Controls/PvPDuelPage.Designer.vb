@@ -134,6 +134,7 @@ Partial Class PvPDuelPage
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox1)
+        Me.DoubleBuffered = True
         Me.Name = "PvPDuelPage"
         Me.Size = New System.Drawing.Size(927, 467)
         CType(Me.Tournaments, System.ComponentModel.ISupportInitialize).EndInit()

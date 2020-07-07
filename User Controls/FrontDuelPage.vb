@@ -2,7 +2,7 @@
 
     Dim questionList As New List(Of String)
     Dim answerList As New List(Of String)
-    Private Sub SinglePlayer_MouseMove(sender As Object, e As MouseEventArgs) Handles SinglePlayer.MouseMove
+    Private Sub SinglePlayer_MouseMove(sender As Object, e As EventArgs) Handles SinglePlayer.MouseEnter
         SinglePlayer.Image = My.Resources.SinglePlayerR
         SinglePlayer.Tag = "R"
 
@@ -13,7 +13,7 @@
         Buttons1.ResetButtons()
     End Sub
 
-    Private Sub PvP_MouseMove(sender As Object, e As MouseEventArgs) Handles PvP.MouseMove
+    Private Sub PvP_MouseMove(sender As Object, e As EventArgs) Handles PvP.MouseEnter
         PvP.Image = My.Resources.PvPR
         PvP.Tag = "R"
 
@@ -24,12 +24,12 @@
         Buttons1.ResetButtons()
     End Sub
 
-    Private Sub FrontDuelPage_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
+    Private Sub FrontDuelPage_MouseMove(sender As Object, e As EventArgs) Handles Me.MouseEnter
         ResetButtons()
         Buttons1.ResetButtons()
     End Sub
 
-    Private Sub Buttons1_MouseMove(sender As Object, e As MouseEventArgs) Handles Buttons1.MouseMove, PictureBox1.MouseMove
+    Private Sub Buttons1_MouseMove(sender As Object, e As EventArgs) Handles Buttons1.MouseEnter, PictureBox1.MouseEnter
         ResetButtons()
     End Sub
 

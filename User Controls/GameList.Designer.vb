@@ -146,7 +146,7 @@ Partial Class GameList
         '
         Me.banlistCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.banlistCmBox.FormattingEnabled = True
-        Me.banlistCmBox.Items.AddRange(New Object() {"All", "TCG", "OCG", "Traditional", "No Banlist"})
+        Me.banlistCmBox.Items.AddRange(New Object() {"All", "TCG", "OCG", "RUSH", "Traditional", "No Banlist"})
         Me.banlistCmBox.Location = New System.Drawing.Point(49, 39)
         Me.banlistCmBox.Name = "banlistCmBox"
         Me.banlistCmBox.Size = New System.Drawing.Size(90, 21)
@@ -166,7 +166,7 @@ Partial Class GameList
         '
         Me.gameModeCmBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.gameModeCmBox.FormattingEnabled = True
-        Me.gameModeCmBox.Items.AddRange(New Object() {"All", "TCG/OCG", "TCG", "OCG"})
+        Me.gameModeCmBox.Items.AddRange(New Object() {"All", "TCG/OCG", "TCG", "OCG", "RUSH"})
         Me.gameModeCmBox.Location = New System.Drawing.Point(237, 8)
         Me.gameModeCmBox.Name = "gameModeCmBox"
         Me.gameModeCmBox.Size = New System.Drawing.Size(91, 21)
