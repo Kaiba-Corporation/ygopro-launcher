@@ -1273,7 +1273,7 @@
             border = 152
         ElseIf ListBox1.SelectedItem = "Shén-MörderX Border" Then
             border = 153
-        ElseIf ListBox1.SelectedItem = "Jaem.Reach Border" Then
+        ElseIf ListBox1.SelectedItem = "JaemReach Border I" Then
             border = 154
         ElseIf ListBox1.SelectedItem = "ShaddollWendigo Border" Then
             border = 155
@@ -1305,6 +1305,8 @@
             border = 168
         ElseIf ListBox1.SelectedItem = "WindMillCrow Border" Then
             border = 169
+        ElseIf ListBox1.SelectedItem = "JaemReach Border II" Then
+            border = 170
         End If
 
         If borderList.Contains(border) Then
@@ -1619,7 +1621,7 @@
             border = 152
         ElseIf ListBox1.SelectedItem = "Shén-MörderX Border" Then
             border = 153
-        ElseIf ListBox1.SelectedItem = "Jaem.Reach Border" Then
+        ElseIf ListBox1.SelectedItem = "JaemReach Border I" Then
             border = 154
         ElseIf ListBox1.SelectedItem = "ShaddollWendigo Border" Then
             border = 155
@@ -1651,6 +1653,8 @@
             border = 168
         ElseIf ListBox1.SelectedItem = "WindMillCrow Border" Then
             border = 169
+        ElseIf ListBox1.SelectedItem = "JaemReach Border II" Then
+            border = 170
         End If
 
         Try
@@ -2050,8 +2054,9 @@
         If Launcher.Username = "Shén-MörderX" Then
             ListBox1.Items.Add("Shén-MörderX Border")
         End If
-        If Launcher.Username = "Jaem.Reach" Then
-            ListBox1.Items.Add("Jaem.Reach Border")
+        If Launcher.Username = "JaemReach" Then
+            ListBox1.Items.Add("JaemReach Border I")
+            ListBox1.Items.Add("JaemReach Border II")
         End If
         If Launcher.Username = "ShaddollWendigo" Then
             ListBox1.Items.Add("ShaddollWendigo Border")
