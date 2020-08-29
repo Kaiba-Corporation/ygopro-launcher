@@ -65,9 +65,14 @@ Public Class Options_2
             CheckBox7.Checked = False
         End If
         If My.Settings.ShowPostDuelMessages = 1 Then
-            showPostDuelMessages.Checked = True
+            showPostDuelMessagesChb.Checked = True
         Else
-            showPostDuelMessages.Checked = False
+            showPostDuelMessagesChb.Checked = False
+        End If
+        If My.Settings.ShowPostDuelDeckMessages = 1 Then
+            showPostDuelDeckMessagesChb.Checked = True
+        Else
+            showPostDuelDeckMessagesChb.Checked = False
         End If
         If My.Settings.showAdvertisements = True Then
             showAdvertisements.Checked = True
@@ -158,6 +163,16 @@ Public Class Options_2
             My.Settings.ColoredMessages = True
         Else
             My.Settings.ColoredMessages = False
+        End If
+        If showPostDuelMessagesChb.Checked = True Then
+            My.Settings.ShowPostDuelMessages = 1
+        Else
+            My.Settings.ShowPostDuelMessages = 0
+        End If
+        If showPostDuelDeckMessagesChb.Checked = True Then
+            My.Settings.ShowPostDuelDeckMessages = 1
+        Else
+            My.Settings.ShowPostDuelDeckMessages = 0
         End If
         If showAdvertisements.Checked = True Then
             My.Settings.showAdvertisements = True

@@ -218,9 +218,6 @@
     <Setting Name="hostDuelMode" Type="System.String" Scope="User">
       <Value Profile="(Default)">Single Duel</Value>
     </Setting>
-    <Setting Name="hostMasterRules" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Rule 4 (Links)</Value>
-    </Setting>
     <Setting Name="hostDontRecoverTime" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
@@ -241,6 +238,12 @@
     </Setting>
     <Setting Name="SessionStatus" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="hostMasterRules" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Rule 5 (April 2020)</Value>
+    </Setting>
+    <Setting Name="ShowPostDuelDeckMessages" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
     </Setting>
   </Settings>
 </SettingsFile>

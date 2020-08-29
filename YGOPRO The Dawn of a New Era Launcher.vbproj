@@ -165,6 +165,12 @@
     <Compile Include="Pending Deck.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PostDuelDeckMessage.Designer.vb">
+      <DependentUpon>PostDuelDeckMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PostDuelDeckMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransparentRichTextbox.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -508,6 +514,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pending Deck.resx">
       <DependentUpon>Pending Deck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostDuelDeckMessage.resx">
+      <DependentUpon>PostDuelDeckMessage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PostDuelMessage.resx">
       <DependentUpon>PostDuelMessage.vb</DependentUpon>

@@ -48,7 +48,7 @@ Partial Class Options_2
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.showAdvertisements = New System.Windows.Forms.CheckBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.showPostDuelMessages = New System.Windows.Forms.CheckBox()
+        Me.showPostDuelMessagesChb = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -101,6 +101,7 @@ Partial Class Options_2
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.editGameSettingsBtn = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.showPostDuelDeckMessagesChb = New System.Windows.Forms.CheckBox()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -152,7 +153,7 @@ Partial Class Options_2
         Me.GroupBox6.ForeColor = System.Drawing.Color.White
         Me.GroupBox6.Location = New System.Drawing.Point(501, 15)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(302, 308)
+        Me.GroupBox6.Size = New System.Drawing.Size(302, 301)
         Me.GroupBox6.TabIndex = 35
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Default Host Settings"
@@ -183,7 +184,7 @@ Partial Class Options_2
         Me.Button1.BackColor = System.Drawing.Color.Silver
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(219, 275)
+        Me.Button1.Location = New System.Drawing.Point(221, 271)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 30
@@ -373,7 +374,7 @@ Partial Class Options_2
         Me.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.saveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.saveBtn.ForeColor = System.Drawing.Color.Black
-        Me.saveBtn.Location = New System.Drawing.Point(700, 397)
+        Me.saveBtn.Location = New System.Drawing.Point(700, 359)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(103, 34)
         Me.saveBtn.TabIndex = 34
@@ -385,9 +386,9 @@ Partial Class Options_2
         Me.GroupBox5.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox5.Controls.Add(Me.showAdvertisements)
         Me.GroupBox5.ForeColor = System.Drawing.Color.White
-        Me.GroupBox5.Location = New System.Drawing.Point(11, 382)
+        Me.GroupBox5.Location = New System.Drawing.Point(293, 322)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(302, 49)
+        Me.GroupBox5.Size = New System.Drawing.Size(159, 49)
         Me.GroupBox5.TabIndex = 33
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Advertisements"
@@ -406,25 +407,26 @@ Partial Class Options_2
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox4.Controls.Add(Me.showPostDuelMessages)
+        Me.GroupBox4.Controls.Add(Me.showPostDuelDeckMessagesChb)
+        Me.GroupBox4.Controls.Add(Me.showPostDuelMessagesChb)
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
-        Me.GroupBox4.Location = New System.Drawing.Point(501, 329)
+        Me.GroupBox4.Location = New System.Drawing.Point(11, 322)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(302, 49)
+        Me.GroupBox4.Size = New System.Drawing.Size(271, 71)
         Me.GroupBox4.TabIndex = 32
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Post Duel Messages"
         '
-        'showPostDuelMessages
+        'showPostDuelMessagesChb
         '
-        Me.showPostDuelMessages.AutoSize = True
-        Me.showPostDuelMessages.ForeColor = System.Drawing.Color.White
-        Me.showPostDuelMessages.Location = New System.Drawing.Point(20, 21)
-        Me.showPostDuelMessages.Name = "showPostDuelMessages"
-        Me.showPostDuelMessages.Size = New System.Drawing.Size(153, 17)
-        Me.showPostDuelMessages.TabIndex = 10
-        Me.showPostDuelMessages.Text = "Show Post Duel Messages"
-        Me.showPostDuelMessages.UseVisualStyleBackColor = True
+        Me.showPostDuelMessagesChb.AutoSize = True
+        Me.showPostDuelMessagesChb.ForeColor = System.Drawing.Color.White
+        Me.showPostDuelMessagesChb.Location = New System.Drawing.Point(20, 21)
+        Me.showPostDuelMessagesChb.Name = "showPostDuelMessagesChb"
+        Me.showPostDuelMessagesChb.Size = New System.Drawing.Size(153, 17)
+        Me.showPostDuelMessagesChb.TabIndex = 10
+        Me.showPostDuelMessagesChb.Text = "Show Post Duel Messages"
+        Me.showPostDuelMessagesChb.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -442,7 +444,7 @@ Partial Class Options_2
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(11, 15)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(484, 363)
+        Me.GroupBox1.Size = New System.Drawing.Size(484, 301)
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Chat"
@@ -565,7 +567,7 @@ Partial Class Options_2
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(6, 15)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(265, 342)
+        Me.GroupBox2.Size = New System.Drawing.Size(265, 260)
         Me.GroupBox2.TabIndex = 6
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Colors"
@@ -690,7 +692,7 @@ Partial Class Options_2
         Me.Button2.BackColor = System.Drawing.Color.Silver
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(184, 313)
+        Me.Button2.Location = New System.Drawing.Point(178, 224)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 5
@@ -973,19 +975,30 @@ Partial Class Options_2
         Me.editGameSettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.editGameSettingsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.editGameSettingsBtn.ForeColor = System.Drawing.Color.Black
-        Me.editGameSettingsBtn.Location = New System.Drawing.Point(501, 397)
+        Me.editGameSettingsBtn.Location = New System.Drawing.Point(501, 359)
         Me.editGameSettingsBtn.Name = "editGameSettingsBtn"
         Me.editGameSettingsBtn.Size = New System.Drawing.Size(193, 34)
         Me.editGameSettingsBtn.TabIndex = 36
         Me.editGameSettingsBtn.Text = "Edit Game Settings"
         Me.editGameSettingsBtn.UseVisualStyleBackColor = False
         '
+        'showPostDuelDeckMessagesChb
+        '
+        Me.showPostDuelDeckMessagesChb.AutoSize = True
+        Me.showPostDuelDeckMessagesChb.ForeColor = System.Drawing.Color.White
+        Me.showPostDuelDeckMessagesChb.Location = New System.Drawing.Point(20, 44)
+        Me.showPostDuelDeckMessagesChb.Name = "showPostDuelDeckMessagesChb"
+        Me.showPostDuelDeckMessagesChb.Size = New System.Drawing.Size(182, 17)
+        Me.showPostDuelDeckMessagesChb.TabIndex = 11
+        Me.showPostDuelDeckMessagesChb.Text = "Show Post Duel Deck Messages"
+        Me.showPostDuelDeckMessagesChb.UseVisualStyleBackColor = True
+        '
         'Options_2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(813, 440)
+        Me.ClientSize = New System.Drawing.Size(813, 402)
         Me.Controls.Add(Me.editGameSettingsBtn)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.saveBtn)
@@ -1053,7 +1066,7 @@ Partial Class Options_2
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents showAdvertisements As CheckBox
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents showPostDuelMessages As CheckBox
+    Friend WithEvents showPostDuelMessagesChb As CheckBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents CheckBox7 As CheckBox
     Friend WithEvents Label24 As Label
@@ -1108,4 +1121,5 @@ Partial Class Options_2
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents turnTimerCmBox As ComboBox
     Friend WithEvents Label19 As Label
+    Friend WithEvents showPostDuelDeckMessagesChb As CheckBox
 End Class

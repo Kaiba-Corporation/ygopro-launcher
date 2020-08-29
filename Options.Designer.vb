@@ -118,7 +118,7 @@ Partial Class Options
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.showAdvertisements = New System.Windows.Forms.CheckBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.showPostDuelMessages = New System.Windows.Forms.CheckBox()
+        Me.showPostDuelMessagesChb = New System.Windows.Forms.CheckBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -192,6 +192,7 @@ Partial Class Options
         Me.rbnNextTurn = New System.Windows.Forms.RadioButton()
         Me.rbnFlip = New System.Windows.Forms.RadioButton()
         Me.rbnGainLP = New System.Windows.Forms.RadioButton()
+        Me.showPostDuelDeckMessagesChb = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -801,7 +802,7 @@ Partial Class Options
         Me.GroupBox3.Controls.Add(Me.UDX)
         Me.GroupBox3.Controls.Add(Me.US)
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(7, 374)
+        Me.GroupBox3.Location = New System.Drawing.Point(7, 371)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(483, 237)
         Me.GroupBox3.TabIndex = 5
@@ -1032,7 +1033,7 @@ Partial Class Options
         Me.GroupBox6.Controls.Add(Me.duelModeCmBox)
         Me.GroupBox6.Controls.Add(Me.Label44)
         Me.GroupBox6.ForeColor = System.Drawing.Color.White
-        Me.GroupBox6.Location = New System.Drawing.Point(505, 124)
+        Me.GroupBox6.Location = New System.Drawing.Point(505, 139)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(302, 308)
         Me.GroupBox6.TabIndex = 29
@@ -1267,7 +1268,7 @@ Partial Class Options
         Me.GroupBox5.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox5.Controls.Add(Me.showAdvertisements)
         Me.GroupBox5.ForeColor = System.Drawing.Color.White
-        Me.GroupBox5.Location = New System.Drawing.Point(505, 65)
+        Me.GroupBox5.Location = New System.Drawing.Point(505, 84)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(302, 49)
         Me.GroupBox5.TabIndex = 7
@@ -1288,25 +1289,26 @@ Partial Class Options
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox4.Controls.Add(Me.showPostDuelMessages)
+        Me.GroupBox4.Controls.Add(Me.showPostDuelDeckMessagesChb)
+        Me.GroupBox4.Controls.Add(Me.showPostDuelMessagesChb)
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
         Me.GroupBox4.Location = New System.Drawing.Point(505, 6)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(302, 49)
+        Me.GroupBox4.Size = New System.Drawing.Size(302, 72)
         Me.GroupBox4.TabIndex = 6
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Post Duel Messages"
         '
-        'showPostDuelMessages
+        'showPostDuelMessagesChb
         '
-        Me.showPostDuelMessages.AutoSize = True
-        Me.showPostDuelMessages.ForeColor = System.Drawing.Color.White
-        Me.showPostDuelMessages.Location = New System.Drawing.Point(20, 21)
-        Me.showPostDuelMessages.Name = "showPostDuelMessages"
-        Me.showPostDuelMessages.Size = New System.Drawing.Size(153, 17)
-        Me.showPostDuelMessages.TabIndex = 10
-        Me.showPostDuelMessages.Text = "Show Post Duel Messages"
-        Me.showPostDuelMessages.UseVisualStyleBackColor = True
+        Me.showPostDuelMessagesChb.AutoSize = True
+        Me.showPostDuelMessagesChb.ForeColor = System.Drawing.Color.White
+        Me.showPostDuelMessagesChb.Location = New System.Drawing.Point(20, 21)
+        Me.showPostDuelMessagesChb.Name = "showPostDuelMessagesChb"
+        Me.showPostDuelMessagesChb.Size = New System.Drawing.Size(153, 17)
+        Me.showPostDuelMessagesChb.TabIndex = 10
+        Me.showPostDuelMessagesChb.Text = "Show Post Duel Messages"
+        Me.showPostDuelMessagesChb.UseVisualStyleBackColor = True
         '
         'TabPage2
         '
@@ -2155,6 +2157,17 @@ Partial Class Options
         Me.rbnGainLP.Text = "Gain LP"
         Me.rbnGainLP.UseVisualStyleBackColor = True
         '
+        'showPostDuelDeckMessagesChb
+        '
+        Me.showPostDuelDeckMessagesChb.AutoSize = True
+        Me.showPostDuelDeckMessagesChb.ForeColor = System.Drawing.Color.White
+        Me.showPostDuelDeckMessagesChb.Location = New System.Drawing.Point(20, 44)
+        Me.showPostDuelDeckMessagesChb.Name = "showPostDuelDeckMessagesChb"
+        Me.showPostDuelDeckMessagesChb.Size = New System.Drawing.Size(182, 17)
+        Me.showPostDuelDeckMessagesChb.TabIndex = 11
+        Me.showPostDuelDeckMessagesChb.Text = "Show Post Duel Deck Messages"
+        Me.showPostDuelDeckMessagesChb.UseVisualStyleBackColor = True
+        '
         'Options
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2363,7 +2376,7 @@ Partial Class Options
     Friend WithEvents rbnFlip As System.Windows.Forms.RadioButton
     Friend WithEvents rbnGainLP As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents showPostDuelMessages As System.Windows.Forms.CheckBox
+    Friend WithEvents showPostDuelMessagesChb As System.Windows.Forms.CheckBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label39 As System.Windows.Forms.Label
     Friend WithEvents saveBtn As Button
@@ -2395,4 +2408,5 @@ Partial Class Options
     Friend WithEvents Button1 As Button
     Friend WithEvents turnTimerCmBox As ComboBox
     Friend WithEvents Label19 As Label
+    Friend WithEvents showPostDuelDeckMessagesChb As CheckBox
 End Class

@@ -190,7 +190,7 @@ Public Class Launcher
 
     Dim sessionStatus As String
 
-    Dim Version As String = "5.24.0.5050"
+    Dim Version As String = "5.25.0.5077"
     Dim Version_2 As String = "1.15.0.1677"
 
     Public chatPort As Integer = 2080
@@ -198,7 +198,7 @@ Public Class Launcher
 
     Public beta As Boolean = False
 
-    Public launcherEdition As Integer = 2
+    Public launcherEdition As Integer = 1
     Public ygoproExe As String = "YGOPRO.exe "
     Public ygoproUrl1 As String = "http://ygopro.org/TDOANE.php"
     Public ygoproUrl2 As String = "http://tdoane.com/TDOANE.php"
@@ -3967,8 +3967,8 @@ Public Class Launcher
                     PostDuelMessage.unrankedDuel.Location = New Point(78, 133)
 
                     Dim result As Integer = rn.Next(0, 10)
-                    If result <3 Then
-                        PostDuelMessage.BackgroundImage= My.Resources.postDuelWin0
+                    If result < 3 Then
+                        PostDuelMessage.BackgroundImage = My.Resources.postDuelWin0
                     ElseIf result >= 3 And result < 6 Then
                         PostDuelMessage.BackgroundImage = My.Resources.postDuelWin1
                     Else
@@ -4035,6 +4035,24 @@ Public Class Launcher
                 End If
 
                 postDuelMessageTimer.Start()
+            End If
+            If sParts(0) = "PostDuelDeckMessage" Then
+                Try
+                    If My.Settings.ShowPostDuelDeckMessages = 0 Then
+                        Return
+                    End If
+
+                    PostDuelDeckMessage.deckId = sParts(1)
+                    PostDuelDeckMessage.deckName = sParts(2)
+                    PostDuelDeckMessage.mainDeck = Split(sParts(3), ",")
+                    PostDuelDeckMessage.extraDeck = Split(sParts(4), ",")
+                    PostDuelDeckMessage.sideDeck = Split(sParts(5), ",")
+
+                    PostDuelDeckMessage.diamondRewardLbl.Text = sParts(7)
+
+                    PostDuelDeckMessage.Show()
+                Catch
+                End Try
             End If
             If sParts(0) = "Rooms" Then
                 Try
