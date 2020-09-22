@@ -87,6 +87,8 @@ Partial Class CommunityCenter
         Me.Panel54 = New System.Windows.Forms.Panel()
         Me.Panel51 = New System.Windows.Forms.Panel()
         Me.Panel50 = New System.Windows.Forms.Panel()
+        Me.NewsControl2 = New YGOPRO_The_Dawn_of_a_New_Era_Launcher.NewsControl()
+        Me.NewsControl1 = New YGOPRO_The_Dawn_of_a_New_Era_Launcher.NewsControl()
         Me.NewsPageCount = New System.Windows.Forms.Label()
         Me.newsButtonLeft = New System.Windows.Forms.Button()
         Me.newsButtonRight = New System.Windows.Forms.Button()
@@ -227,8 +229,6 @@ Partial Class CommunityCenter
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.NewsControl2 = New YGOPRO_The_Dawn_of_a_New_Era_Launcher.NewsControl()
-        Me.NewsControl1 = New YGOPRO_The_Dawn_of_a_New_Era_Launcher.NewsControl()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -940,6 +940,24 @@ Partial Class CommunityCenter
         Me.Panel50.Name = "Panel50"
         Me.Panel50.Size = New System.Drawing.Size(1, 199)
         Me.Panel50.TabIndex = 289
+        '
+        'NewsControl2
+        '
+        Me.NewsControl2.BackColor = System.Drawing.Color.Black
+        Me.NewsControl2.Location = New System.Drawing.Point(13, 130)
+        Me.NewsControl2.Name = "NewsControl2"
+        Me.NewsControl2.Size = New System.Drawing.Size(615, 98)
+        Me.NewsControl2.TabIndex = 287
+        Me.NewsControl2.Visible = False
+        '
+        'NewsControl1
+        '
+        Me.NewsControl1.BackColor = System.Drawing.Color.Black
+        Me.NewsControl1.Location = New System.Drawing.Point(13, 26)
+        Me.NewsControl1.Name = "NewsControl1"
+        Me.NewsControl1.Size = New System.Drawing.Size(615, 98)
+        Me.NewsControl1.TabIndex = 286
+        Me.NewsControl1.Visible = False
         '
         'NewsPageCount
         '
@@ -1699,7 +1717,7 @@ Partial Class CommunityCenter
         '
         Me.season.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.season.FormattingEnabled = True
-        Me.season.Items.AddRange(New Object() {"Current", "18", "17", "16", "15", "14", "13", "12", "11", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1"})
+        Me.season.Items.AddRange(New Object() {"Current", "19", "18", "17", "16", "15", "14", "13", "12", "11", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1"})
         Me.season.Location = New System.Drawing.Point(219, 9)
         Me.season.Name = "season"
         Me.season.Size = New System.Drawing.Size(76, 21)
@@ -2379,24 +2397,6 @@ Partial Class CommunityCenter
         Me.PictureBox1.Size = New System.Drawing.Size(857, 67)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
-        '
-        'NewsControl2
-        '
-        Me.NewsControl2.BackColor = System.Drawing.Color.Black
-        Me.NewsControl2.Location = New System.Drawing.Point(13, 130)
-        Me.NewsControl2.Name = "NewsControl2"
-        Me.NewsControl2.Size = New System.Drawing.Size(615, 98)
-        Me.NewsControl2.TabIndex = 287
-        Me.NewsControl2.Visible = False
-        '
-        'NewsControl1
-        '
-        Me.NewsControl1.BackColor = System.Drawing.Color.Black
-        Me.NewsControl1.Location = New System.Drawing.Point(13, 26)
-        Me.NewsControl1.Name = "NewsControl1"
-        Me.NewsControl1.Size = New System.Drawing.Size(615, 98)
-        Me.NewsControl1.TabIndex = 286
-        Me.NewsControl1.Visible = False
         '
         'CommunityCenter
         '

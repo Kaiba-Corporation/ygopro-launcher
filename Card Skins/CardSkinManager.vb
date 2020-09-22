@@ -266,14 +266,21 @@ Module CardSkinManager
                 deleteIds += " or ID = " & 420
             End If
         End If
-		If Not skinList.Contains(500) Then
+        If Not skinList.Contains(500) Then
             If deleteIds = "" Then
                 deleteIds += "ID = " & 500
             Else
                 deleteIds += " or ID = " & 500
             End If
         End If
-		If Not skinList.Contains(55555) Then
+        If Not skinList.Contains(5000) Then
+            If deleteIds = "" Then
+                deleteIds += "ID = " & 5000
+            Else
+                deleteIds += " or ID = " & 5000
+            End If
+        End If
+        If Not skinList.Contains(55555) Then
             If deleteIds = "" Then
                 deleteIds += "ID = " & 55555
             Else
