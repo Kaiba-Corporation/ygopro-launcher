@@ -29,6 +29,7 @@ Public Class Launcher
     Public Current As String = Directory.GetCurrentDirectory
     Public UserID As String
     Public Username As String
+    Public Token As String
     Public MyTeam As String
     Public MyRating As String
     Public MyGold As String
@@ -190,8 +191,8 @@ Public Class Launcher
 
     Dim sessionStatus As String
 
-    Dim Version As String = "5.27.0.5131"
-    Dim Version_2 As String = "1.17.0.1731"
+    Dim Version As String = "5.28.0.5158"
+    Dim Version_2 As String = "1.18.0.1758"
 
     Public chatPort As Integer = 2080
     Public gamePort As Integer = 7000
@@ -1386,6 +1387,7 @@ Public Class Launcher
                     AdBlock = sParts(76)
                     CustomBorder = sParts(77)
                     UserID = sParts(78)
+                    Token = sParts(79)
 
                     Try
                         serverTime = Convert.ToDateTime(sParts(63))
@@ -2108,7 +2110,6 @@ Public Class Launcher
                         EditProfile.TextBox6.Text = sParts(6)
                         EditProfile.TextBox5.Text = sParts(7)
                         EditProfile.TextBox7.Text = sParts(8)
-                        EditProfile.avatarURLTxt.Text = sParts(9)
                         EditProfile.Username.Text = Username
                         EditProfile.Rank.Text = Rank
                         EditProfile.Team.Text = MyTeam
@@ -2235,12 +2236,6 @@ Public Class Launcher
                     Catch
                     End Try
                 End If
-            End If
-            If sParts(0) = "CardBackURL" Then
-                Try
-                    EditProfile.cardBackURLTxt.Text = sParts(1)
-                Catch
-                End Try
             End If
             If sParts(0) = "RequestProfile" Then
                 If sParts(1) = Username Then
@@ -6349,8 +6344,8 @@ Public Class Launcher
     End Sub
 #End Region
 #Region "Profile"
-    Public Sub UpdateProfile(ByVal Gender, ByVal Age, ByVal Location, ByVal FC, ByVal JH, ByVal Email, ByVal Skype, ByVal ImageURL, ByVal CardBackURL, ByVal AboutMe, ByVal newTitle)
-        streamw.WriteLine("UpdateProfile<{]>" & Username & "<{]>" & Gender & "<{]>" & Age & "<{]>" & Location & "<{]>" & FC & "<{]>" & JH & "<{]>" & Email & "<{]>" & Skype & "<{]>" & ImageURL & "<{]>" & CardBackURL & "<{]>" & AboutMe & "<{]>" & newTitle)
+    Public Sub UpdateProfile(ByVal Gender, ByVal Age, ByVal Location, ByVal FC, ByVal JH, ByVal Email, ByVal Skype, ByVal AboutMe, ByVal newTitle)
+        streamw.WriteLine("UpdateProfile<{]>" & Username & "<{]>" & Gender & "<{]>" & Age & "<{]>" & Location & "<{]>" & FC & "<{]>" & JH & "<{]>" & Email & "<{]>" & Skype & "<{]>" & AboutMe & "<{]>" & newTitle)
         streamw.Flush()
     End Sub
     Public Sub RequestProfile(ByVal RQUsername)

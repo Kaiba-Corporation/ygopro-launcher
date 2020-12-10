@@ -125,16 +125,6 @@ Partial Class EditProfile
         Me.Panel41 = New System.Windows.Forms.Panel()
         Me.Panel42 = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Panel35 = New System.Windows.Forms.Panel()
-        Me.Panel36 = New System.Windows.Forms.Panel()
-        Me.Panel37 = New System.Windows.Forms.Panel()
-        Me.Panel38 = New System.Windows.Forms.Panel()
-        Me.cardBackURLTxt = New System.Windows.Forms.TextBox()
-        Me.Panel31 = New System.Windows.Forms.Panel()
-        Me.Panel32 = New System.Windows.Forms.Panel()
-        Me.Panel33 = New System.Windows.Forms.Panel()
-        Me.Panel34 = New System.Windows.Forms.Panel()
-        Me.avatarURLTxt = New System.Windows.Forms.TextBox()
         Me.Panel27 = New System.Windows.Forms.Panel()
         Me.Panel28 = New System.Windows.Forms.Panel()
         Me.Panel29 = New System.Windows.Forms.Panel()
@@ -164,9 +154,7 @@ Partial Class EditProfile
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label51 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label52 = New System.Windows.Forms.Label()
@@ -247,6 +235,9 @@ Partial Class EditProfile
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.uploadAvatarBtn = New System.Windows.Forms.Button()
+        Me.uploadCardBackBtn = New System.Windows.Forms.Button()
+        Me.selectImageFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.A1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1094,6 +1085,8 @@ Partial Class EditProfile
         'Settings
         '
         Me.Settings.BackColor = System.Drawing.Color.Black
+        Me.Settings.Controls.Add(Me.uploadCardBackBtn)
+        Me.Settings.Controls.Add(Me.uploadAvatarBtn)
         Me.Settings.Controls.Add(Me.Button15)
         Me.Settings.Controls.Add(Me.Button10)
         Me.Settings.Controls.Add(Me.defaultDeck)
@@ -1126,16 +1119,6 @@ Partial Class EditProfile
         Me.Settings.Controls.Add(Me.Panel41)
         Me.Settings.Controls.Add(Me.Panel42)
         Me.Settings.Controls.Add(Me.TextBox2)
-        Me.Settings.Controls.Add(Me.Panel35)
-        Me.Settings.Controls.Add(Me.Panel36)
-        Me.Settings.Controls.Add(Me.Panel37)
-        Me.Settings.Controls.Add(Me.Panel38)
-        Me.Settings.Controls.Add(Me.cardBackURLTxt)
-        Me.Settings.Controls.Add(Me.Panel31)
-        Me.Settings.Controls.Add(Me.Panel32)
-        Me.Settings.Controls.Add(Me.Panel33)
-        Me.Settings.Controls.Add(Me.Panel34)
-        Me.Settings.Controls.Add(Me.avatarURLTxt)
         Me.Settings.Controls.Add(Me.Panel27)
         Me.Settings.Controls.Add(Me.Panel28)
         Me.Settings.Controls.Add(Me.Panel29)
@@ -1165,9 +1148,7 @@ Partial Class EditProfile
         Me.Settings.Controls.Add(Me.Label5)
         Me.Settings.Controls.Add(Me.Label10)
         Me.Settings.Controls.Add(Me.Label3)
-        Me.Settings.Controls.Add(Me.Label11)
         Me.Settings.Controls.Add(Me.Label4)
-        Me.Settings.Controls.Add(Me.Label51)
         Me.Settings.Controls.Add(Me.Label7)
         Me.Settings.Controls.Add(Me.Label9)
         Me.Settings.Controls.Add(Me.Label52)
@@ -1504,94 +1485,6 @@ Partial Class EditProfile
         Me.TextBox2.Size = New System.Drawing.Size(177, 13)
         Me.TextBox2.TabIndex = 219
         '
-        'Panel35
-        '
-        Me.Panel35.BackColor = System.Drawing.Color.Cyan
-        Me.Panel35.Location = New System.Drawing.Point(488, 193)
-        Me.Panel35.Name = "Panel35"
-        Me.Panel35.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel35.Size = New System.Drawing.Size(1, 16)
-        Me.Panel35.TabIndex = 218
-        '
-        'Panel36
-        '
-        Me.Panel36.BackColor = System.Drawing.Color.Cyan
-        Me.Panel36.Location = New System.Drawing.Point(307, 193)
-        Me.Panel36.Name = "Panel36"
-        Me.Panel36.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel36.Size = New System.Drawing.Size(1, 16)
-        Me.Panel36.TabIndex = 217
-        '
-        'Panel37
-        '
-        Me.Panel37.BackColor = System.Drawing.Color.Cyan
-        Me.Panel37.Location = New System.Drawing.Point(307, 209)
-        Me.Panel37.Name = "Panel37"
-        Me.Panel37.Size = New System.Drawing.Size(182, 1)
-        Me.Panel37.TabIndex = 216
-        '
-        'Panel38
-        '
-        Me.Panel38.BackColor = System.Drawing.Color.Cyan
-        Me.Panel38.Location = New System.Drawing.Point(307, 193)
-        Me.Panel38.Name = "Panel38"
-        Me.Panel38.Size = New System.Drawing.Size(182, 1)
-        Me.Panel38.TabIndex = 215
-        '
-        'cardBackURLTxt
-        '
-        Me.cardBackURLTxt.BackColor = System.Drawing.Color.Black
-        Me.cardBackURLTxt.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.cardBackURLTxt.ForeColor = System.Drawing.Color.Cyan
-        Me.cardBackURLTxt.Location = New System.Drawing.Point(310, 195)
-        Me.cardBackURLTxt.Name = "cardBackURLTxt"
-        Me.cardBackURLTxt.Size = New System.Drawing.Size(177, 13)
-        Me.cardBackURLTxt.TabIndex = 214
-        '
-        'Panel31
-        '
-        Me.Panel31.BackColor = System.Drawing.Color.Cyan
-        Me.Panel31.Location = New System.Drawing.Point(488, 149)
-        Me.Panel31.Name = "Panel31"
-        Me.Panel31.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel31.Size = New System.Drawing.Size(1, 16)
-        Me.Panel31.TabIndex = 213
-        '
-        'Panel32
-        '
-        Me.Panel32.BackColor = System.Drawing.Color.Cyan
-        Me.Panel32.Location = New System.Drawing.Point(307, 149)
-        Me.Panel32.Name = "Panel32"
-        Me.Panel32.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel32.Size = New System.Drawing.Size(1, 16)
-        Me.Panel32.TabIndex = 212
-        '
-        'Panel33
-        '
-        Me.Panel33.BackColor = System.Drawing.Color.Cyan
-        Me.Panel33.Location = New System.Drawing.Point(307, 165)
-        Me.Panel33.Name = "Panel33"
-        Me.Panel33.Size = New System.Drawing.Size(182, 1)
-        Me.Panel33.TabIndex = 211
-        '
-        'Panel34
-        '
-        Me.Panel34.BackColor = System.Drawing.Color.Cyan
-        Me.Panel34.Location = New System.Drawing.Point(307, 149)
-        Me.Panel34.Name = "Panel34"
-        Me.Panel34.Size = New System.Drawing.Size(182, 1)
-        Me.Panel34.TabIndex = 210
-        '
-        'avatarURLTxt
-        '
-        Me.avatarURLTxt.BackColor = System.Drawing.Color.Black
-        Me.avatarURLTxt.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.avatarURLTxt.ForeColor = System.Drawing.Color.Cyan
-        Me.avatarURLTxt.Location = New System.Drawing.Point(310, 151)
-        Me.avatarURLTxt.Name = "avatarURLTxt"
-        Me.avatarURLTxt.Size = New System.Drawing.Size(177, 13)
-        Me.avatarURLTxt.TabIndex = 209
-        '
         'Panel27
         '
         Me.Panel27.BackColor = System.Drawing.Color.Cyan
@@ -1858,17 +1751,6 @@ Partial Class EditProfile
         Me.Label3.TabIndex = 163
         Me.Label3.Text = "Skype:"
         '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.ForeColor = System.Drawing.Color.Cyan
-        Me.Label11.Location = New System.Drawing.Point(303, 131)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(66, 13)
-        Me.Label11.TabIndex = 170
-        Me.Label11.Text = "Avatar URL:"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -1879,17 +1761,6 @@ Partial Class EditProfile
         Me.Label4.Size = New System.Drawing.Size(35, 13)
         Me.Label4.TabIndex = 162
         Me.Label4.Text = "Email:"
-        '
-        'Label51
-        '
-        Me.Label51.AutoSize = True
-        Me.Label51.BackColor = System.Drawing.Color.Transparent
-        Me.Label51.ForeColor = System.Drawing.Color.Cyan
-        Me.Label51.Location = New System.Drawing.Point(304, 174)
-        Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(85, 13)
-        Me.Label51.TabIndex = 174
-        Me.Label51.Text = "Card Back URL:"
         '
         'Label7
         '
@@ -2778,6 +2649,34 @@ Partial Class EditProfile
         Me.PictureBox5.TabIndex = 135
         Me.PictureBox5.TabStop = False
         '
+        'uploadAvatarBtn
+        '
+        Me.uploadAvatarBtn.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
+        Me.uploadAvatarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.uploadAvatarBtn.ForeColor = System.Drawing.Color.Cyan
+        Me.uploadAvatarBtn.Location = New System.Drawing.Point(398, 187)
+        Me.uploadAvatarBtn.Name = "uploadAvatarBtn"
+        Me.uploadAvatarBtn.Size = New System.Drawing.Size(105, 27)
+        Me.uploadAvatarBtn.TabIndex = 278
+        Me.uploadAvatarBtn.Text = "Upload Avatar"
+        Me.uploadAvatarBtn.UseVisualStyleBackColor = True
+        '
+        'uploadCardBackBtn
+        '
+        Me.uploadCardBackBtn.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
+        Me.uploadCardBackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.uploadCardBackBtn.ForeColor = System.Drawing.Color.Cyan
+        Me.uploadCardBackBtn.Location = New System.Drawing.Point(398, 220)
+        Me.uploadCardBackBtn.Name = "uploadCardBackBtn"
+        Me.uploadCardBackBtn.Size = New System.Drawing.Size(105, 27)
+        Me.uploadCardBackBtn.TabIndex = 279
+        Me.uploadCardBackBtn.Text = "Upload Card Back"
+        Me.uploadCardBackBtn.UseVisualStyleBackColor = True
+        '
+        'selectImageFileDialog
+        '
+        Me.selectImageFileDialog.FileName = "OpenFileDialog1"
+        '
         'EditProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2875,9 +2774,7 @@ Partial Class EditProfile
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label51 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label52 As System.Windows.Forms.Label
@@ -2897,16 +2794,6 @@ Partial Class EditProfile
     Friend WithEvents Panel41 As System.Windows.Forms.Panel
     Friend WithEvents Panel42 As System.Windows.Forms.Panel
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Panel35 As System.Windows.Forms.Panel
-    Friend WithEvents Panel36 As System.Windows.Forms.Panel
-    Friend WithEvents Panel37 As System.Windows.Forms.Panel
-    Friend WithEvents Panel38 As System.Windows.Forms.Panel
-    Friend WithEvents cardBackURLTxt As System.Windows.Forms.TextBox
-    Friend WithEvents Panel31 As System.Windows.Forms.Panel
-    Friend WithEvents Panel32 As System.Windows.Forms.Panel
-    Friend WithEvents Panel33 As System.Windows.Forms.Panel
-    Friend WithEvents Panel34 As System.Windows.Forms.Panel
-    Friend WithEvents avatarURLTxt As System.Windows.Forms.TextBox
     Friend WithEvents Panel27 As System.Windows.Forms.Panel
     Friend WithEvents Panel28 As System.Windows.Forms.Panel
     Friend WithEvents Panel29 As System.Windows.Forms.Panel
@@ -3050,4 +2937,7 @@ Partial Class EditProfile
     Friend WithEvents singleDrawLbl As Label
     Friend WithEvents singleLostLbl As Label
     Friend WithEvents A1 As PictureBox
+    Friend WithEvents uploadCardBackBtn As Button
+    Friend WithEvents uploadAvatarBtn As Button
+    Friend WithEvents selectImageFileDialog As OpenFileDialog
 End Class

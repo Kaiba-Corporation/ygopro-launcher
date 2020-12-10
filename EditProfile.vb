@@ -1,4 +1,9 @@
-﻿Public Class EditProfile
+﻿Imports System
+Imports System.IO
+Imports System.Threading.Tasks
+Imports System.Net.Http
+
+Public Class EditProfile
     Public titleList As New List(Of String)
     Public unrankedWins As Integer
     Public rankedWins As Integer
@@ -1309,6 +1314,8 @@
             border = 170
         ElseIf ListBox1.SelectedItem = "Zappy Border II" Then
             border = 171
+        ElseIf ListBox1.SelectedItem = "hafdyb Border" Then
+            border = 172
         End If
 
         If borderList.Contains(border) Then
@@ -1659,6 +1666,8 @@
             border = 170
         ElseIf ListBox1.SelectedItem = "Zappy Border II" Then
             border = 171
+        ElseIf ListBox1.SelectedItem = "hafdyb Border" Then
+            border = 172
         End If
 
         Try
@@ -1776,7 +1785,7 @@
 
     Public Sub UpdateProfile(ByVal close As Boolean)
         If ComboBox1.Text = "Male" Or ComboBox1.Text = "Female" Then
-            If avatarURLTxt.Text <> "" Or cardBackURLTxt.Text <> "" Then
+            If Launcher.AvatarItem <> 0 Or Launcher.CardBackItem <> 0 Then
                 If Launcher.achievements.Contains(0) = False Then
                     Launcher.AddAchievement(Launcher.Username, 0, 0)
                     Launcher.achievements.Add(0)
@@ -1797,7 +1806,7 @@
                 newTitle = "None"
                 Launcher.MyTitle = "None"
             End If
-            Launcher.UpdateProfile(ComboBox1.Text, Val(NumericUpDown1.Text), TextBox2.Text, TextBox4.Text, TextBox6.Text, TextBox5.Text, TextBox7.Text, avatarURLTxt.Text, cardBackURLTxt.Text, RichTextBox1.Text, newTitle)
+            Launcher.UpdateProfile(ComboBox1.Text, Val(NumericUpDown1.Text), TextBox2.Text, TextBox4.Text, TextBox6.Text, TextBox5.Text, TextBox7.Text, RichTextBox1.Text, newTitle)
             If close = True Then
                 Hide()
             End If
@@ -1939,13 +1948,6 @@
             chatMessage2.Text = Launcher.ignoreMessage
         End If
 
-        If Launcher.AvatarItem = 0 Then
-            avatarURLTxt.Enabled = False
-        End If
-        If Launcher.CardBackItem = 0 Then
-            cardBackURLTxt.Enabled = False
-        End If
-
         If Launcher.Username = "*Luna*" Then
             ListBox1.Items.Add("Luna Border I")
             ListBox1.Items.Add("Luna Border II")
@@ -2007,10 +2009,10 @@
         If Launcher.Username = "n00b_of_legend" Then
             ListBox1.Items.Add("n00b_of_legend Border")
         End If
-		If Launcher.Username = "MeiMei" Then
+        If Launcher.Username = "MeiMei" Then
             ListBox1.Items.Add("MeiMei Border")
         End If
-		If Launcher.Username = "Old Yama" Then
+        If Launcher.Username = "Old Yama" Then
             ListBox1.Items.Add("Old Yama Border")
         End If
         If Launcher.Username = "Astrike7" Then
@@ -2022,10 +2024,10 @@
         If Launcher.Username = "Cloudie" Then
             ListBox1.Items.Add("Cloudie Border")
         End If
-		If Launcher.Username = "BreadedShark" Then
+        If Launcher.Username = "BreadedShark" Then
             ListBox1.Items.Add("BreadedShark Border")
         End If
-		If Launcher.Username = "casx" Then
+        If Launcher.Username = "casx" Then
             ListBox1.Items.Add("casx Border")
         End If
         If Launcher.Username = "TigranxDaddy" Then
@@ -2079,7 +2081,7 @@
         If Launcher.Username = "Pumpkinstraw09" Then
             ListBox1.Items.Add("Pumpkinstraw09 Border")
         End If
-		If Launcher.Username = "Magician7" Then
+        If Launcher.Username = "Magician7" Then
             ListBox1.Items.Add("Magician7 Border")
         End If
         If Launcher.Username = "Zappy" Then
@@ -2096,6 +2098,9 @@
         End If
         If Launcher.Username = "WindMillCrow" Then
             ListBox1.Items.Add("WindMillCrow Border")
+        End If
+        If Launcher.Username = "hafdyb" Then
+            ListBox1.Items.Add("hafdyb Border")
         End If
     End Sub
 
@@ -2196,5 +2201,49 @@
                 Exit For
             End If
         Next
+    End Sub
+
+    Private Sub uploadAvatarBtn_Click(sender As Object, e As EventArgs) Handles uploadAvatarBtn.Click
+        If Launcher.AvatarItem = 0 Then
+            MessageBox.Show("You must purchase the Avatar item before you can upload a custom avatar!", "Error")
+        Else
+            UploadImage("avatar")
+        End If
+    End Sub
+
+    Private Sub uploadCardBackBtn_Click(sender As Object, e As EventArgs) Handles uploadCardBackBtn.Click
+        If Launcher.CardBackItem = 0 Then
+            MessageBox.Show("You must purchase the Card Back item before you can upload a custom card back!", "Error")
+        Else
+            UploadImage("sleeve")
+        End If
+    End Sub
+
+    Private Sub UploadImage(fileType As String)
+        selectImageFileDialog.Title = "Select Image"
+        selectImageFileDialog.FileName = "Select Image"
+        selectImageFileDialog.Filter = "Image Files (PNG/JPG/JPEG)|*.png;*.jpg;*.jpeg"
+        Dim result = selectImageFileDialog.ShowDialog()
+        If (result = DialogResult.Cancel) Then
+            Return
+        End If
+
+        Dim fileName As String = selectImageFileDialog.FileName
+        Dim fileBytes As Byte() = File.ReadAllBytes(fileName)
+
+        Dim multiPartForm As MultipartFormDataContent = New MultipartFormDataContent()
+        multiPartForm.Add(New StringContent(Launcher.Token), "token")
+        multiPartForm.Add(New StringContent(fileType), "fileType")
+        multiPartForm.Add(New ByteArrayContent(fileBytes, 0, fileBytes.Length), "fileToUpload", Path.GetFileName(fileName))
+
+        Dim uploadThread As New Threading.Thread(AddressOf UploadFile)
+        uploadThread.Start(multiPartForm)
+    End Sub
+
+    Private Sub UploadFile(multiPartForm As MultipartFormDataContent)
+        Dim httpClient As HttpClient = New HttpClient()
+        Dim response As HttpResponseMessage = httpClient.PostAsync("http://ygopro.xyz/kaibapro/uploads/upload.php", multiPartForm).Result
+
+        MessageBox.Show(response.Content.ReadAsStringAsync().Result)
     End Sub
 End Class
