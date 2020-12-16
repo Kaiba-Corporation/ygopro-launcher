@@ -1717,7 +1717,7 @@ Partial Class CommunityCenter
         '
         Me.season.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.season.FormattingEnabled = True
-        Me.season.Items.AddRange(New Object() {"Current", "19", "18", "17", "16", "15", "14", "13", "12", "11", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1"})
+        Me.season.Items.AddRange(New Object() {"Current", "20", "19", "18", "17", "16", "15", "14", "13", "12", "11", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1"})
         Me.season.Location = New System.Drawing.Point(219, 9)
         Me.season.Name = "season"
         Me.season.Size = New System.Drawing.Size(76, 21)
