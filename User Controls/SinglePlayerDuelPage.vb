@@ -228,7 +228,7 @@ Public Class SinglePlayerDuelPage
         Launcher.duelingRobot.lifePointsCmBox.SelectedIndex = 5
         Launcher.duelingRobot.startingHandCmBox.SelectedIndex = 5
         Launcher.duelingRobot.cardsPerDrawCmBox.SelectedIndex = 1
-        Launcher.duelingRobot.turnTimerCmBox.SelectedIndex = 4
+        Launcher.duelingRobot.turnTimerCmBox.SelectedIndex = 1
         Me.Dispose()
     End Sub
 

@@ -191,8 +191,8 @@ Public Class Launcher
 
     Dim sessionStatus As String
 
-    Dim Version As String = "5.29.0.5185"
-    Dim Version_2 As String = "1.19.0.1785"
+    Dim Version As String = "5.29.1.5212"
+    Dim Version_2 As String = "1.19.1.1812"
 
     Public chatPort As Integer = 2080
     Public gamePort As Integer = 7000
@@ -3526,7 +3526,7 @@ Public Class Launcher
                 objwriter.Write(Environment.NewLine)
                 objwriter.Write("gamename = Game")
                 objwriter.Write(Environment.NewLine)
-                objwriter.Write("roompass = " & "030" & sParts(1))
+                objwriter.Write("roompass = " & sParts(1))
                 objwriter.Write(Environment.NewLine)
                 objwriter.Write("lastdeck = " & My.Settings.DefaultDeck)
                 objwriter.Write(Environment.NewLine)
@@ -4404,13 +4404,6 @@ Public Class Launcher
                 objwriter.Close()
 
                 JarvisTimer.Start()
-
-                If (sParts.Length = 3) Then
-                    If (sParts(2) = 2) Then
-                        duelingRobot.portTxt.Text = sParts(1)
-                        MessageBox.Show("You duel port is: " & sParts(1) & Environment.NewLine & Environment.NewLine & "You can give this port to your friends and invite them to join the tag, or you can use it to add more bots.", "Duel Port")
-                    End If
-                End If
             End If
             If sParts(0) = "Avatar" Then
                 AvatarItem = 1
