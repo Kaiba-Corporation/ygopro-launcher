@@ -191,15 +191,15 @@ Public Class Launcher
 
     Dim sessionStatus As String
 
-    Dim Version As String = "5.30.0.5239"
-    Dim Version_2 As String = "1.20.0.1839"
+    Dim Version As String = "5.31.0.5266"
+    Dim Version_2 As String = "1.21.0.1866"
 
     Public chatPort As Integer = 2080
     Public gamePort As Integer = 7000
 
     Public beta As Boolean = False
 
-    Public launcherEdition As Integer = 2
+    Public launcherEdition As Integer = 1
     Public ygoproExe As String = "YGOPRO.exe "
     Public ygoproUrl1 As String = "http://ygopro.org/TDOANE.php"
     Public ygoproUrl2 As String = "http://tdoane.com/TDOANE.php"
