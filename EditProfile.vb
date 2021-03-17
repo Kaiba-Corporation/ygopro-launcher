@@ -1314,8 +1314,10 @@ Public Class EditProfile
             border = 170
         ElseIf ListBox1.SelectedItem = "Zappy Border II" Then
             border = 171
-        ElseIf ListBox1.SelectedItem = "hafdyb Border" Then
+        ElseIf ListBox1.SelectedItem = "hafdyb Border I" Then
             border = 172
+        ElseIf ListBox1.SelectedItem = "hafdyb Border II" Then
+            border = 173
         End If
 
         If borderList.Contains(border) Then
@@ -1666,8 +1668,10 @@ Public Class EditProfile
             border = 170
         ElseIf ListBox1.SelectedItem = "Zappy Border II" Then
             border = 171
-        ElseIf ListBox1.SelectedItem = "hafdyb Border" Then
+        ElseIf ListBox1.SelectedItem = "hafdyb Border I" Then
             border = 172
+        ElseIf ListBox1.SelectedItem = "hafdyb Border II" Then
+            border = 173
         End If
 
         Try
@@ -2100,7 +2104,8 @@ Public Class EditProfile
             ListBox1.Items.Add("WindMillCrow Border")
         End If
         If Launcher.Username = "hafdyb" Then
-            ListBox1.Items.Add("hafdyb Border")
+            ListBox1.Items.Add("hafdyb Border I")
+            ListBox1.Items.Add("hafdyb Border II")
         End If
     End Sub
 
@@ -2242,7 +2247,7 @@ Public Class EditProfile
 
     Private Sub UploadFile(multiPartForm As MultipartFormDataContent)
         Dim httpClient As HttpClient = New HttpClient()
-        Dim response As HttpResponseMessage = httpClient.PostAsync("http://ygopro.xyz/kaibapro/uploads/upload.php", multiPartForm).Result
+        Dim response As HttpResponseMessage = httpClient.PostAsync("http://ygopro.org/kaibapro/uploads/upload.php", multiPartForm).Result
 
         MessageBox.Show(response.Content.ReadAsStringAsync().Result)
     End Sub
