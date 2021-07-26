@@ -1318,6 +1318,8 @@ Public Class EditProfile
             border = 172
         ElseIf ListBox1.SelectedItem = "hafdyb Border II" Then
             border = 173
+        ElseIf ListBox1.SelectedItem = "The Herd." Then
+            border = 174
         End If
 
         If borderList.Contains(border) Then
@@ -1672,6 +1674,8 @@ Public Class EditProfile
             border = 172
         ElseIf ListBox1.SelectedItem = "hafdyb Border II" Then
             border = 173
+        ElseIf ListBox1.SelectedItem = "The Herd." Then
+            border = 174
         End If
 
         Try
@@ -2106,6 +2110,9 @@ Public Class EditProfile
         If Launcher.Username = "hafdyb" Then
             ListBox1.Items.Add("hafdyb Border I")
             ListBox1.Items.Add("hafdyb Border II")
+        End If
+        If Launcher.Username = "The Herd." Then
+            ListBox1.Items.Add("The Herd. Border")
         End If
     End Sub
 
