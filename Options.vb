@@ -49,50 +49,10 @@ Public Class Options
         Else
             CheckBox5.Checked = True
         End If
-        If My.Settings.UDX = 1 Then
-            UDX.Checked = True
-        Else
-            UDX.Checked = False
-        End If
         If My.Settings.US = 0 Then
             US.Checked = True
         Else
             US.Checked = False
-        End If
-        If My.Settings.FS = 1 Then
-            FS.Checked = True
-        Else
-            FS.Checked = False
-        End If
-        If My.Settings.AA = 2 Then
-            AA.Checked = True
-        Else
-            AA.Checked = False
-        End If
-        If My.Settings.AMCP = 1 Then
-            AMCP.Checked = True
-        Else
-            AMCP.Checked = False
-        End If
-        If My.Settings.ASTCP = 1 Then
-            ASTCP.Checked = True
-        Else
-            ASTCP.Checked = False
-        End If
-        If My.Settings.RCP = 1 Then
-            RCP.Checked = True
-        Else
-            RCP.Checked = False
-        End If
-        If My.Settings.ACO = 1 Then
-            ACO.Checked = True
-        Else
-            ACO.Checked = False
-        End If
-        If My.Settings.NDFC = 1 Then
-            NDFC.Checked = True
-        Else
-            NDFC.Checked = False
         End If
         If My.Settings.showTeam = True Then
             showTeam.Checked = True
@@ -124,19 +84,6 @@ Public Class Options
         Else
             showAdvertisements.Checked = False
         End If
-        If My.Settings.enableMusic = 1 Then
-            enableMusic.Checked = True
-        Else
-            enableMusic.Checked = False
-        End If
-        If My.Settings.enableSound = 1 Then
-            enableSound.Checked = True
-        Else
-            enableSound.Checked = False
-        End If
-
-        musicTrackBar.Value = My.Settings.MusicVolume
-        soundTrackBar.Value = My.Settings.SoundVolume
 
         masterRulesCmBox.Text = My.Settings.hostMasterRules
         banlistCmBox.Text = My.Settings.hostBanlist
@@ -270,20 +217,7 @@ Public Class Options
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        UDX.Checked = True
         US.Checked = True
-        AA.Checked = True
-        FS.Checked = False
-        AMCP.Checked = True
-        RCP.Checked = False
-        ACO.Checked = True
-        NDFC.Checked = False
-        AMCP.Checked = False
-        ASTCP.Checked = True
-        enableMusic.Checked = True
-        enableSound.Checked = True
-        musicTrackBar.Value = 30
-        soundTrackBar.Value = 30
     End Sub
 
     Private Sub PictureBox18_Click(sender As Object, e As EventArgs) Handles PictureBox18.Click
@@ -720,51 +654,11 @@ Public Class Options
         Else
             My.Settings.STS = 0
         End If
-        If UDX.Checked = True Then
-            My.Settings.UDX = 1
-        Else
-            My.Settings.UDX = 0
-        End If
         If US.Checked = True Then
             My.Settings.UDX = 1
             My.Settings.US = 0
         Else
             My.Settings.US = -1
-        End If
-        If FS.Checked = True Then
-            My.Settings.FS = 1
-        Else
-            My.Settings.FS = 0
-        End If
-        If AA.Checked = True Then
-            My.Settings.AA = 2
-        Else
-            My.Settings.AA = 0
-        End If
-        If AMCP.Checked = True Then
-            My.Settings.AMCP = 1
-        Else
-            My.Settings.AMCP = 0
-        End If
-        If ASTCP.Checked = True Then
-            My.Settings.ASTCP = 1
-        Else
-            My.Settings.ASTCP = 0
-        End If
-        If RCP.Checked = True Then
-            My.Settings.RCP = 1
-        Else
-            My.Settings.RCP = 0
-        End If
-        If ACO.Checked = True Then
-            My.Settings.ACO = 1
-        Else
-            My.Settings.ACO = 0
-        End If
-        If NDFC.Checked = True Then
-            My.Settings.NDFC = 1
-        Else
-            My.Settings.NDFC = 0
         End If
         If showTeam.Checked = True Then
             My.Settings.showTeam = True
@@ -796,19 +690,6 @@ Public Class Options
         Else
             My.Settings.showAdvertisements = False
         End If
-        If enableMusic.Checked = True Then
-            My.Settings.enableMusic = 1
-        Else
-            My.Settings.enableMusic = 0
-        End If
-        If enableSound.Checked = True Then
-            My.Settings.enableSound = 1
-        Else
-            My.Settings.enableSound = 0
-        End If
-
-        My.Settings.MusicVolume = musicTrackBar.Value
-        My.Settings.SoundVolume = soundTrackBar.Value
 
         Launcher.RichTextBox2.BackColor = My.Settings.TypeText
         Launcher.searchbar.BackColor = My.Settings.Search

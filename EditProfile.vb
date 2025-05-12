@@ -1831,37 +1831,6 @@ Public Class EditProfile
         ChangePassword.Show()
     End Sub
 
-    Public Sub LoadDecks()
-        Try
-            ChDir(Launcher.Current)
-            Dim di As New IO.DirectoryInfo(Launcher.Current & "\YGOPRO\deck\")
-            Dim diar1 As IO.FileInfo() = di.GetFiles()
-            Dim dra As IO.FileInfo
-
-            For Each dra In diar1
-                Dim newDeck As String = dra.ToString
-                newDeck = newDeck.Substring(0, newDeck.Length - 4)
-
-                defaultDeck.Items.Add(newDeck)
-            Next
-
-            Try
-                defaultDeck.Text = defaultDeck.Items(0)
-            Catch
-                defaultDeck.Text = "Error - No Decks"
-            End Try
-        Catch
-            MsgBox("Error 2000: There was a problem loading your deck list!")
-        End Try
-    End Sub
-
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        My.Settings.DefaultDeck = defaultDeck.SelectedItem
-        My.Settings.Save()
-
-        MsgBox("Default Deck Updated!")
-    End Sub
-
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
         If friendList.SelectedIndex <> -1 Then
             Launcher.RequestProfile(friendList.SelectedItem)

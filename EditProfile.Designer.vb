@@ -93,10 +93,9 @@ Partial Class EditProfile
         Me.A3 = New System.Windows.Forms.PictureBox()
         Me.A2 = New System.Windows.Forms.PictureBox()
         Me.Settings = New System.Windows.Forms.TabPage()
+        Me.uploadCardBackBtn = New System.Windows.Forms.Button()
+        Me.uploadAvatarBtn = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.defaultDeck = New System.Windows.Forms.ComboBox()
-        Me.Label129 = New System.Windows.Forms.Label()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -235,8 +234,6 @@ Partial Class EditProfile
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.uploadAvatarBtn = New System.Windows.Forms.Button()
-        Me.uploadCardBackBtn = New System.Windows.Forms.Button()
         Me.selectImageFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -1088,9 +1085,6 @@ Partial Class EditProfile
         Me.Settings.Controls.Add(Me.uploadCardBackBtn)
         Me.Settings.Controls.Add(Me.uploadAvatarBtn)
         Me.Settings.Controls.Add(Me.Button15)
-        Me.Settings.Controls.Add(Me.Button10)
-        Me.Settings.Controls.Add(Me.defaultDeck)
-        Me.Settings.Controls.Add(Me.Label129)
         Me.Settings.Controls.Add(Me.Button9)
         Me.Settings.Controls.Add(Me.Button8)
         Me.Settings.Controls.Add(Me.Button7)
@@ -1162,6 +1156,30 @@ Partial Class EditProfile
         Me.Settings.TabIndex = 5
         Me.Settings.Text = "Settings"
         '
+        'uploadCardBackBtn
+        '
+        Me.uploadCardBackBtn.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
+        Me.uploadCardBackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.uploadCardBackBtn.ForeColor = System.Drawing.Color.Cyan
+        Me.uploadCardBackBtn.Location = New System.Drawing.Point(717, 40)
+        Me.uploadCardBackBtn.Name = "uploadCardBackBtn"
+        Me.uploadCardBackBtn.Size = New System.Drawing.Size(105, 27)
+        Me.uploadCardBackBtn.TabIndex = 279
+        Me.uploadCardBackBtn.Text = "Upload Card Back"
+        Me.uploadCardBackBtn.UseVisualStyleBackColor = True
+        '
+        'uploadAvatarBtn
+        '
+        Me.uploadAvatarBtn.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
+        Me.uploadAvatarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.uploadAvatarBtn.ForeColor = System.Drawing.Color.Cyan
+        Me.uploadAvatarBtn.Location = New System.Drawing.Point(717, 7)
+        Me.uploadAvatarBtn.Name = "uploadAvatarBtn"
+        Me.uploadAvatarBtn.Size = New System.Drawing.Size(105, 27)
+        Me.uploadAvatarBtn.TabIndex = 278
+        Me.uploadAvatarBtn.Text = "Upload Avatar"
+        Me.uploadAvatarBtn.UseVisualStyleBackColor = True
+        '
         'Button15
         '
         Me.Button15.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
@@ -1173,39 +1191,6 @@ Partial Class EditProfile
         Me.Button15.TabIndex = 277
         Me.Button15.Text = "Custom Private Chat"
         Me.Button15.UseVisualStyleBackColor = True
-        '
-        'Button10
-        '
-        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.ForeColor = System.Drawing.Color.Cyan
-        Me.Button10.Location = New System.Drawing.Point(719, 43)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(88, 25)
-        Me.Button10.TabIndex = 276
-        Me.Button10.Text = "Save"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
-        'defaultDeck
-        '
-        Me.defaultDeck.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.defaultDeck.FormattingEnabled = True
-        Me.defaultDeck.Location = New System.Drawing.Point(625, 16)
-        Me.defaultDeck.Name = "defaultDeck"
-        Me.defaultDeck.Size = New System.Drawing.Size(182, 21)
-        Me.defaultDeck.TabIndex = 275
-        '
-        'Label129
-        '
-        Me.Label129.AutoSize = True
-        Me.Label129.BackColor = System.Drawing.Color.Transparent
-        Me.Label129.ForeColor = System.Drawing.Color.Cyan
-        Me.Label129.Location = New System.Drawing.Point(529, 19)
-        Me.Label129.Name = "Label129"
-        Me.Label129.Size = New System.Drawing.Size(73, 13)
-        Me.Label129.TabIndex = 274
-        Me.Label129.Text = "Default Deck:"
         '
         'Button9
         '
@@ -2616,7 +2601,7 @@ Partial Class EditProfile
         Me.Label56.ForeColor = System.Drawing.Color.White
         Me.Label56.Location = New System.Drawing.Point(697, 71)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(131, 16)
+        Me.Label56.Size = New System.Drawing.Size(130, 16)
         Me.Label56.TabIndex = 134
         Me.Label56.Text = "Achievements: 12/70"
         '
@@ -2648,30 +2633,6 @@ Partial Class EditProfile
         Me.PictureBox5.Size = New System.Drawing.Size(837, 67)
         Me.PictureBox5.TabIndex = 135
         Me.PictureBox5.TabStop = False
-        '
-        'uploadAvatarBtn
-        '
-        Me.uploadAvatarBtn.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
-        Me.uploadAvatarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.uploadAvatarBtn.ForeColor = System.Drawing.Color.Cyan
-        Me.uploadAvatarBtn.Location = New System.Drawing.Point(398, 187)
-        Me.uploadAvatarBtn.Name = "uploadAvatarBtn"
-        Me.uploadAvatarBtn.Size = New System.Drawing.Size(105, 27)
-        Me.uploadAvatarBtn.TabIndex = 278
-        Me.uploadAvatarBtn.Text = "Upload Avatar"
-        Me.uploadAvatarBtn.UseVisualStyleBackColor = True
-        '
-        'uploadCardBackBtn
-        '
-        Me.uploadCardBackBtn.FlatAppearance.BorderColor = System.Drawing.Color.Cyan
-        Me.uploadCardBackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.uploadCardBackBtn.ForeColor = System.Drawing.Color.Cyan
-        Me.uploadCardBackBtn.Location = New System.Drawing.Point(398, 220)
-        Me.uploadCardBackBtn.Name = "uploadCardBackBtn"
-        Me.uploadCardBackBtn.Size = New System.Drawing.Size(105, 27)
-        Me.uploadCardBackBtn.TabIndex = 279
-        Me.uploadCardBackBtn.Text = "Upload Card Back"
-        Me.uploadCardBackBtn.UseVisualStyleBackColor = True
         '
         'selectImageFileDialog
         '
@@ -2881,9 +2842,6 @@ Partial Class EditProfile
     Friend WithEvents Label46 As System.Windows.Forms.Label
     Friend WithEvents Label47 As System.Windows.Forms.Label
     Friend WithEvents Label48 As System.Windows.Forms.Label
-    Friend WithEvents Label129 As System.Windows.Forms.Label
-    Friend WithEvents defaultDeck As System.Windows.Forms.ComboBox
-    Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents TabPage11 As System.Windows.Forms.TabPage
     Friend WithEvents Button12 As System.Windows.Forms.Button
     Friend WithEvents Button16 As System.Windows.Forms.Button

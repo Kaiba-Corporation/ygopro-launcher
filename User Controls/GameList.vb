@@ -144,37 +144,16 @@ Public Class GameList
 
     Private Sub JoinGame()
         Try
-            Dim objwriter As New System.IO.StreamWriter(Launcher.Current & "\YGOPRO\" & "system.CONF")
+            Dim objwriter As New System.IO.StreamWriter(Launcher.Current & "\YGOPRO\" & "duel.CONF")
             objwriter.WriteLine("#config file")
             objwriter.WriteLine("#nickname & gamename should be less than 20 characters")
-            If duelTypeLabel.Text.Contains("Match") Then
-                objwriter.WriteLine("use_d3d = 0")
-                objwriter.WriteLine("skin_index = -1")
-            Else
-                objwriter.WriteLine("use_d3d = " & My.Settings.UDX)
-                objwriter.WriteLine("skin_index = " & My.Settings.US)
-            End If
-            objwriter.WriteLine("antialias = " & My.Settings.AA)
-            objwriter.WriteLine("errorlog = 0")
+            objwriter.WriteLine("skin_index = " & My.Settings.US)
             objwriter.WriteLine("nickname = " & Launcher.Username)
             objwriter.WriteLine("gamename = Game")
             objwriter.WriteLine("roompass = " & gameNameLabel.Text)
-            objwriter.WriteLine("lastdeck = " & My.Settings.DefaultDeck)
-            objwriter.WriteLine("textfont = fonts/simhei.ttf 14")
-            objwriter.WriteLine("numfont = fonts/arialbd.ttf")
             objwriter.WriteLine("serverport = " & Launcher.gamePort)
-            objwriter.WriteLine("lastip = " & Launcher.IP)
+            objwriter.WriteLine("lasthost = " & Launcher.IP)
             objwriter.WriteLine("lastport = " & Launcher.gamePort)
-            objwriter.WriteLine("fullscreen = " & My.Settings.FS)
-            objwriter.WriteLine("enable_sound = " & My.Settings.enableSound)
-            objwriter.WriteLine("sound_volume = " & My.Settings.SoundVolume)
-            objwriter.WriteLine("enable_music = " & My.Settings.enableMusic)
-            objwriter.WriteLine("music_volume = " & My.Settings.MusicVolume)
-            objwriter.WriteLine("auto_monster_placing = " & My.Settings.AMCP)
-            objwriter.WriteLine("auto_spelltrap_placing = " & My.Settings.ASTCP)
-            objwriter.WriteLine("random_card_placing = " & My.Settings.RCP)
-            objwriter.WriteLine("auto_chain_order = " & My.Settings.ACO)
-            objwriter.WriteLine("no_delay_for_chain = " & My.Settings.NDFC)
             If Launcher.Mute = 0 Then
                 objwriter.WriteLine("mute_chat = " & 0)
             Else
@@ -299,62 +278,6 @@ Public Class GameList
 
     Private Sub moreInfo_Click(sender As Object, e As EventArgs) Handles moreInfo.Click
         MsgBox("Extended search looks for opponents in a higher rating range, an opponent may be found faster however your opponent may have a significantly higher or lower rating than you.")
-    End Sub
-
-    Private Sub globalRankedServerHelpButton_Click(sender As Object, e As EventArgs)
-        MsgBox("Playing on the Global Ranked Server will not increase your TDOANE rating. You are not able to use Card Skins, Avatars or Custom Card Backs on this server.")
-    End Sub
-
-    Private Sub globalRankingServerButton_Click(sender As Object, e As EventArgs)
-        Try
-            Dim objwriter As New System.IO.StreamWriter(Launcher.Current & "\YGOPRO\" & "system.CONF")
-            objwriter.WriteLine("#config file")
-            objwriter.WriteLine("#nickname & gamename should be less than 20 characters")
-            If duelTypeLabel.Text.Contains("Match") Then
-                objwriter.WriteLine("use_d3d = 0")
-                objwriter.WriteLine("skin_index = -1")
-            Else
-                objwriter.WriteLine("use_d3d = " & My.Settings.UDX)
-                objwriter.WriteLine("skin_index = " & My.Settings.US)
-            End If
-            objwriter.WriteLine("antialias = " & My.Settings.AA)
-            objwriter.WriteLine("errorlog = 0")
-            objwriter.WriteLine("nickname = TDOANE_" & Launcher.Username.Replace(" ", "_") & "$TDOANE")
-            objwriter.WriteLine("gamename = Game")
-            objwriter.WriteLine("roompass = " & gameNameLabel.Text)
-            objwriter.WriteLine("lastdeck = " & My.Settings.DefaultDeck)
-            objwriter.WriteLine("textfont = fonts/simhei.ttf 14")
-            objwriter.WriteLine("numfont = fonts/arialbd.ttf")
-            objwriter.WriteLine("serverport = " & 21001)
-            objwriter.WriteLine("lastip = 45.33.106.116")
-            objwriter.WriteLine("lastport = " & 21001)
-            objwriter.WriteLine("fullscreen = " & My.Settings.FS)
-            objwriter.WriteLine("enable_sound = " & My.Settings.enableSound)
-            objwriter.WriteLine("sound_volume = " & My.Settings.SoundVolume)
-            objwriter.WriteLine("enable_music = " & My.Settings.enableMusic)
-            objwriter.WriteLine("music_volume = " & My.Settings.MusicVolume)
-            objwriter.WriteLine("auto_monster_placing = " & My.Settings.AMCP)
-            objwriter.WriteLine("auto_spelltrap_placing = " & My.Settings.ASTCP)
-            objwriter.WriteLine("random_card_placing = " & My.Settings.RCP)
-            objwriter.WriteLine("auto_chain_order = " & My.Settings.ACO)
-            objwriter.WriteLine("no_delay_for_chain = " & My.Settings.NDFC)
-            If Launcher.Mute = 0 Then
-                objwriter.WriteLine("mute_chat = " & 0)
-            Else
-                objwriter.WriteLine("mute_chat = " & 1)
-            End If
-            objwriter.Close()
-
-            CardSkinManager.CopyFullCardDatabase()
-
-            Dim proc As New Process()
-
-            ChDir(Launcher.Current & "\YGOPRO")
-            proc.StartInfo.FileName = Launcher.ygoproExe
-            proc.StartInfo.Arguments = "-j"
-            proc.Start()
-        Catch
-        End Try
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

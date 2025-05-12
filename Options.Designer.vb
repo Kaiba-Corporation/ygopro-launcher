@@ -75,21 +75,7 @@ Partial Class Options
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.soundTrackBar = New System.Windows.Forms.TrackBar()
-        Me.musicTrackBar = New System.Windows.Forms.TrackBar()
-        Me.ASTCP = New System.Windows.Forms.CheckBox()
-        Me.enableSound = New System.Windows.Forms.CheckBox()
-        Me.enableMusic = New System.Windows.Forms.CheckBox()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.NDFC = New System.Windows.Forms.CheckBox()
-        Me.RCP = New System.Windows.Forms.CheckBox()
-        Me.AMCP = New System.Windows.Forms.CheckBox()
-        Me.ACO = New System.Windows.Forms.CheckBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.FS = New System.Windows.Forms.CheckBox()
-        Me.AA = New System.Windows.Forms.CheckBox()
-        Me.UDX = New System.Windows.Forms.CheckBox()
         Me.US = New System.Windows.Forms.CheckBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -118,6 +104,7 @@ Partial Class Options
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.showAdvertisements = New System.Windows.Forms.CheckBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.showPostDuelDeckMessagesChb = New System.Windows.Forms.CheckBox()
         Me.showPostDuelMessagesChb = New System.Windows.Forms.CheckBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
@@ -192,7 +179,6 @@ Partial Class Options
         Me.rbnNextTurn = New System.Windows.Forms.RadioButton()
         Me.rbnFlip = New System.Windows.Forms.RadioButton()
         Me.rbnGainLP = New System.Windows.Forms.RadioButton()
-        Me.showPostDuelDeckMessagesChb = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -214,8 +200,6 @@ Partial Class Options
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.soundTrackBar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.musicTrackBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
@@ -785,82 +769,15 @@ Partial Class Options
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox3.Controls.Add(Me.soundTrackBar)
-        Me.GroupBox3.Controls.Add(Me.musicTrackBar)
-        Me.GroupBox3.Controls.Add(Me.ASTCP)
-        Me.GroupBox3.Controls.Add(Me.enableSound)
-        Me.GroupBox3.Controls.Add(Me.enableMusic)
         Me.GroupBox3.Controls.Add(Me.Button3)
-        Me.GroupBox3.Controls.Add(Me.NDFC)
-        Me.GroupBox3.Controls.Add(Me.RCP)
-        Me.GroupBox3.Controls.Add(Me.AMCP)
-        Me.GroupBox3.Controls.Add(Me.ACO)
-        Me.GroupBox3.Controls.Add(Me.Label17)
-        Me.GroupBox3.Controls.Add(Me.Label16)
-        Me.GroupBox3.Controls.Add(Me.FS)
-        Me.GroupBox3.Controls.Add(Me.AA)
-        Me.GroupBox3.Controls.Add(Me.UDX)
         Me.GroupBox3.Controls.Add(Me.US)
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(7, 371)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(483, 237)
+        Me.GroupBox3.Size = New System.Drawing.Size(483, 46)
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Game"
-        '
-        'soundTrackBar
-        '
-        Me.soundTrackBar.BackColor = System.Drawing.Color.Black
-        Me.soundTrackBar.Location = New System.Drawing.Point(321, 108)
-        Me.soundTrackBar.Maximum = 100
-        Me.soundTrackBar.Name = "soundTrackBar"
-        Me.soundTrackBar.Size = New System.Drawing.Size(135, 45)
-        Me.soundTrackBar.TabIndex = 32
-        Me.soundTrackBar.TickFrequency = 10
-        '
-        'musicTrackBar
-        '
-        Me.musicTrackBar.BackColor = System.Drawing.Color.Black
-        Me.musicTrackBar.Location = New System.Drawing.Point(321, 62)
-        Me.musicTrackBar.Maximum = 100
-        Me.musicTrackBar.Name = "musicTrackBar"
-        Me.musicTrackBar.Size = New System.Drawing.Size(135, 45)
-        Me.musicTrackBar.TabIndex = 31
-        Me.musicTrackBar.TickFrequency = 10
-        '
-        'ASTCP
-        '
-        Me.ASTCP.AutoSize = True
-        Me.ASTCP.ForeColor = System.Drawing.Color.White
-        Me.ASTCP.Location = New System.Drawing.Point(18, 156)
-        Me.ASTCP.Name = "ASTCP"
-        Me.ASTCP.Size = New System.Drawing.Size(164, 17)
-        Me.ASTCP.TabIndex = 30
-        Me.ASTCP.Text = "Auto Spell/Trap Card Placing"
-        Me.ASTCP.UseVisualStyleBackColor = True
-        '
-        'enableSound
-        '
-        Me.enableSound.AutoSize = True
-        Me.enableSound.ForeColor = System.Drawing.Color.White
-        Me.enableSound.Location = New System.Drawing.Point(222, 110)
-        Me.enableSound.Name = "enableSound"
-        Me.enableSound.Size = New System.Drawing.Size(93, 17)
-        Me.enableSound.TabIndex = 29
-        Me.enableSound.Text = "Enable Sound"
-        Me.enableSound.UseVisualStyleBackColor = True
-        '
-        'enableMusic
-        '
-        Me.enableMusic.AutoSize = True
-        Me.enableMusic.ForeColor = System.Drawing.Color.White
-        Me.enableMusic.Location = New System.Drawing.Point(222, 64)
-        Me.enableMusic.Name = "enableMusic"
-        Me.enableMusic.Size = New System.Drawing.Size(90, 17)
-        Me.enableMusic.TabIndex = 28
-        Me.enableMusic.Text = "Enable Music"
-        Me.enableMusic.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -874,109 +791,11 @@ Partial Class Options
         Me.Button3.Text = "Default"
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'NDFC
-        '
-        Me.NDFC.AutoSize = True
-        Me.NDFC.ForeColor = System.Drawing.Color.White
-        Me.NDFC.Location = New System.Drawing.Point(222, 41)
-        Me.NDFC.Name = "NDFC"
-        Me.NDFC.Size = New System.Drawing.Size(115, 17)
-        Me.NDFC.TabIndex = 24
-        Me.NDFC.Text = "No Delay for Chain"
-        Me.NDFC.UseVisualStyleBackColor = True
-        '
-        'RCP
-        '
-        Me.RCP.AutoSize = True
-        Me.RCP.ForeColor = System.Drawing.Color.White
-        Me.RCP.Location = New System.Drawing.Point(18, 110)
-        Me.RCP.Name = "RCP"
-        Me.RCP.Size = New System.Drawing.Size(129, 17)
-        Me.RCP.TabIndex = 19
-        Me.RCP.Text = "Random Card Placing"
-        Me.RCP.UseVisualStyleBackColor = True
-        '
-        'AMCP
-        '
-        Me.AMCP.AutoSize = True
-        Me.AMCP.ForeColor = System.Drawing.Color.White
-        Me.AMCP.Location = New System.Drawing.Point(18, 133)
-        Me.AMCP.Name = "AMCP"
-        Me.AMCP.Size = New System.Drawing.Size(152, 17)
-        Me.AMCP.TabIndex = 18
-        Me.AMCP.Text = "Auto Monster Card Placing"
-        Me.AMCP.UseVisualStyleBackColor = True
-        '
-        'ACO
-        '
-        Me.ACO.AutoSize = True
-        Me.ACO.ForeColor = System.Drawing.Color.White
-        Me.ACO.Location = New System.Drawing.Point(222, 18)
-        Me.ACO.Name = "ACO"
-        Me.ACO.Size = New System.Drawing.Size(107, 17)
-        Me.ACO.TabIndex = 17
-        Me.ACO.Text = "Auto Chain Order"
-        Me.ACO.UseVisualStyleBackColor = True
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(15, 205)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(240, 13)
-        Me.Label17.TabIndex = 16
-        Me.Label17.Text = "* Disabling Skins may fix some crashing problems!"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(15, 188)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(397, 13)
-        Me.Label16.TabIndex = 15
-        Me.Label16.Text = "* Changing the default DirectX option may cause the game to not function properly" &
-    "!"
-        '
-        'FS
-        '
-        Me.FS.AutoSize = True
-        Me.FS.ForeColor = System.Drawing.Color.White
-        Me.FS.Location = New System.Drawing.Point(18, 87)
-        Me.FS.Name = "FS"
-        Me.FS.Size = New System.Drawing.Size(79, 17)
-        Me.FS.TabIndex = 14
-        Me.FS.Text = "Full Screen"
-        Me.FS.UseVisualStyleBackColor = True
-        '
-        'AA
-        '
-        Me.AA.AutoSize = True
-        Me.AA.ForeColor = System.Drawing.Color.White
-        Me.AA.Location = New System.Drawing.Point(18, 64)
-        Me.AA.Name = "AA"
-        Me.AA.Size = New System.Drawing.Size(83, 17)
-        Me.AA.TabIndex = 13
-        Me.AA.Text = "Anti Aliasing"
-        Me.AA.UseVisualStyleBackColor = True
-        '
-        'UDX
-        '
-        Me.UDX.AutoSize = True
-        Me.UDX.ForeColor = System.Drawing.Color.White
-        Me.UDX.Location = New System.Drawing.Point(18, 18)
-        Me.UDX.Name = "UDX"
-        Me.UDX.Size = New System.Drawing.Size(90, 17)
-        Me.UDX.TabIndex = 10
-        Me.UDX.Text = "* Use DirectX"
-        Me.UDX.UseVisualStyleBackColor = True
-        '
         'US
         '
         Me.US.AutoSize = True
         Me.US.ForeColor = System.Drawing.Color.White
-        Me.US.Location = New System.Drawing.Point(18, 41)
+        Me.US.Location = New System.Drawing.Point(18, 18)
         Me.US.Name = "US"
         Me.US.Size = New System.Drawing.Size(81, 17)
         Me.US.TabIndex = 11
@@ -1298,6 +1117,17 @@ Partial Class Options
         Me.GroupBox4.TabIndex = 6
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Post Duel Messages"
+        '
+        'showPostDuelDeckMessagesChb
+        '
+        Me.showPostDuelDeckMessagesChb.AutoSize = True
+        Me.showPostDuelDeckMessagesChb.ForeColor = System.Drawing.Color.White
+        Me.showPostDuelDeckMessagesChb.Location = New System.Drawing.Point(20, 44)
+        Me.showPostDuelDeckMessagesChb.Name = "showPostDuelDeckMessagesChb"
+        Me.showPostDuelDeckMessagesChb.Size = New System.Drawing.Size(182, 17)
+        Me.showPostDuelDeckMessagesChb.TabIndex = 11
+        Me.showPostDuelDeckMessagesChb.Text = "Show Post Duel Deck Messages"
+        Me.showPostDuelDeckMessagesChb.UseVisualStyleBackColor = True
         '
         'showPostDuelMessagesChb
         '
@@ -2157,17 +1987,6 @@ Partial Class Options
         Me.rbnGainLP.Text = "Gain LP"
         Me.rbnGainLP.UseVisualStyleBackColor = True
         '
-        'showPostDuelDeckMessagesChb
-        '
-        Me.showPostDuelDeckMessagesChb.AutoSize = True
-        Me.showPostDuelDeckMessagesChb.ForeColor = System.Drawing.Color.White
-        Me.showPostDuelDeckMessagesChb.Location = New System.Drawing.Point(20, 44)
-        Me.showPostDuelDeckMessagesChb.Name = "showPostDuelDeckMessagesChb"
-        Me.showPostDuelDeckMessagesChb.Size = New System.Drawing.Size(182, 17)
-        Me.showPostDuelDeckMessagesChb.TabIndex = 11
-        Me.showPostDuelDeckMessagesChb.Text = "Show Post Duel Deck Messages"
-        Me.showPostDuelDeckMessagesChb.UseVisualStyleBackColor = True
-        '
         'Options
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2206,8 +2025,6 @@ Partial Class Options
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.soundTrackBar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.musicTrackBar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.GroupBox6.ResumeLayout(False)
@@ -2277,15 +2094,6 @@ Partial Class Options
     Friend WithEvents PictureBox15 As System.Windows.Forms.PictureBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents NDFC As System.Windows.Forms.CheckBox
-    Friend WithEvents RCP As System.Windows.Forms.CheckBox
-    Friend WithEvents AMCP As System.Windows.Forms.CheckBox
-    Friend WithEvents ACO As System.Windows.Forms.CheckBox
-    Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents FS As System.Windows.Forms.CheckBox
-    Friend WithEvents AA As System.Windows.Forms.CheckBox
-    Friend WithEvents UDX As System.Windows.Forms.CheckBox
     Friend WithEvents US As System.Windows.Forms.CheckBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents PictureBox18 As System.Windows.Forms.PictureBox
@@ -2382,11 +2190,6 @@ Partial Class Options
     Friend WithEvents saveBtn As Button
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents showAdvertisements As CheckBox
-    Friend WithEvents ASTCP As CheckBox
-    Friend WithEvents enableSound As CheckBox
-    Friend WithEvents enableMusic As CheckBox
-    Friend WithEvents soundTrackBar As TrackBar
-    Friend WithEvents musicTrackBar As TrackBar
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents masterRulesCmBox As ComboBox
     Friend WithEvents Label18 As Label
